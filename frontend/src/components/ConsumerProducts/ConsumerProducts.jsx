@@ -15,13 +15,13 @@ const ConsumerProducts = ({ _id, prod_name, image, price, avalaible_location, pr
                         </Card.Title>
                     </LinkContainer>
                     <Card.Text as="h5">
-                        Price: RS.{price} <br />Product Size: {prod_size}
+                        Preço: RS.{price} <br />Peso: {prod_size}
                     </Card.Text>
                     <Card.Text as="p">
-                        Location: <span style={{fontWeight:'bold'}}>{avalaible_location}</span>
+                        Localização: <span style={{fontWeight:'bold'}}>{avalaible_location}</span>
                     </Card.Text><br />
                     <LinkContainer to={`/consumer/${_id}`}>
-                        <Button className="btn-preview" varient="success">Preview here</Button>
+                        <Button className="btn-preview" varient="success">Ver mais</Button>
                     </LinkContainer>
                 </Card.Body>
             </Card>

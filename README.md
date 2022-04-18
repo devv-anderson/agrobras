@@ -1,61 +1,47 @@
-<h1 align="center">Agroic - Reforming Agri Living <br /></h1>  
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/49508237/104348350-a5485a80-5527-11eb-854b-b2477bfeb96d.png?" width="500" >
-</p>
+<h1 align="center">AgroBras - Digitalizando o mundo agricola <br /></h1>  
 
-## 🌱Agricultural Web Application for University Project Built with Reactjs + Expressjs + Nodejs + MongoDB (MERN)💻
+
+## Aplicação web construida com Reactjs + Expressjs + Nodejs + MongoDB (MERN)💻
 
 ## Features
 
-- ChatBot
-- Seller Profile
-- Add/Delete Products
-- Edit Profile
-- Add/Edit Personal & Company Address
-- Farmer Profile
-- Add/Delete Grains
-- Edit Profile
-- Add/Edit Address
-- Buy Seeds/Pesticides or Rent Machines
-- Buy Loan & Credit Card
-- Consumer
-- Edit Profile
-- Add/Edit Address
-- Buy Materials From Farmer
-- Payapal Gateway
-- Cart Page
-- Change Quantity
-- Remove Product from Cart Page
-and much more
+- Perfil de vendedor
+- Add/deletar produtos
+- Editar perfil
+- Perfil de agricultor
+- Add/deletar sementes
+- Editar perfil
+- Add/editar endereço
+- Comprar sementes/pesticidas ou maquinas de colheitas
+- Integração paypal
+- Consumidor
+- Editar perfil
+- Add/editar endereço
+- Comprar colheitas de agricultores
+- Carrinho pagina
+- Alterar Quantidade
+- Remover product do carrinho
+- Integração Goole maps
 
-## Usage
+### Env Variavel
 
-### ES Modules in Node
-
-Used ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
-
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
-
-You can also install and setup Babel if you would like
-
-### Env Variables
-
-Create a .env file in then root and add the following
+Crie um arquivo .env na raiz do projeto e adicone as seguintes variaveis
 
 ```
-NODE_ENV = development
+NODE_ENV = desenvolvimento
 PORT = 5000
-MONGO_URI = your mongodb uri
+MONGO_URI = sua mongodb uri
 JWT_SECRET = 'abc123'
-PAYPAL_CLIENT_ID = your paypal client id
+PAYPAL_CLIENT_ID = sua chave paypal
 ```
 Create a .env file inside frontend and add the following
+Crie um arquivo .env dentro da pasta frontend e adicione a seguinte variavel
 
 ```
-REACT_APP_GOOGLE_KEY = "add google map api key"
+REACT_APP_GOOGLE_KEY = "sua chave google map api"
 ```
 
-### Install Dependencies (frontend & backend)
+### Instale as dependencias (frontend & backend)
 
 ```
 npm install
@@ -63,27 +49,17 @@ cd frontend
 npm install
 ```
 
-### Run
+### Executar
 
 ```
-# Run frontend (:3000) & backend (:5000)
+# Executar frontend (:3000) & backend (:5000)
 npm run dev
 
-# Run backend only
+# Executar apenas backend
 npm run server
 ```
 
-## Build & Deploy
-
-```
-# Create frontend prod build
-cd frontend
-npm run build
-```
-
-### Seed Database
-
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
+### Produtos e usuarios de exemplo
 
 ```
 # Import data
@@ -92,27 +68,3 @@ npm run data:import
 # Destroy data
 npm run data:destroy
 ```
-
-## License
-
-The MIT License
-
-Copyright (c) 2020 Sanjula De Alwis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

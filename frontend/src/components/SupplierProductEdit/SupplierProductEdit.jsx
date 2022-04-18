@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import {
-    Form,
-    Button,
-    Container,
-    Row,
-    Col
-} from 'react-bootstrap'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../Message/Message'
@@ -101,67 +95,67 @@ const SupplierProductEdit = ({ match }) => {
     return (
         <Container style={{ marginBottom: '50px' }}>
             <Meta
-                title="Agroic | Supplier Edit"
+                title="AgroBras | Vendedor"
             />
             <FormContainer>
                 <h2 style={{ marginTop: '100px', textAlign: 'center' }}>Product Profile</h2>
                 <Link to='/profile' className='btn btn-light my-3'>
-                    GO BACK
+                    VOLTAR
                 </Link>
                 {loading && <Loader />}
                 {error && <Message variant='danger'>{error}</Message>}
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
-                {successUpdate && <Message variant='success'>Profile Updated!</Message>}
+                {successUpdate && <Message variant='success'>Perfil Atualizado!</Message>}
                 <Form onSubmit={submitHandler}>
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId='name'>
-                                <Form.Label>Name <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="name"
-                                    placeholder="Enter name"
+                                    placeholder="Insira um nome"
                                     value={name}
                                     required
                                     onChange={(e) => setName(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='email'>
-                                <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>E-mail <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="nic"
-                                    placeholder="Enter email or NIC"
+                                    placeholder="Insira um e-mail"
                                     value={email}
                                     required
                                     onChange={(e) => setEmail(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='address'>
-                                <Form.Label>Address <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Endereço <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="address"
                                     as="textarea" rows={1}
-                                    placeholder="Enter address"
+                                    placeholder="Insira um endereço"
                                     value={address}
                                     required
                                     onChange={(e) => setAddress(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='cropSelection'>
-                                <Form.Label>Crop Selection <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Categoria <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="cropSelection"
-                                    placeholder="Enter crop selection"
+                                    placeholder="Ex: fruta, semente"
                                     value={cropSelection}
                                     required
                                     onChange={(e) => setCropSelection(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='storage'>
-                                <Form.Label>Product Size <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Peso <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="storage"
-                                    placeholder="Enter size (kg)"
+                                    placeholder="Insira o peso (kg)"
                                     value={storage}
                                     required
                                     onChange={(e) => setStorage(e.target.value)}
@@ -170,45 +164,45 @@ const SupplierProductEdit = ({ match }) => {
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId='image'>
-                                <Form.Label>Image <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Imagem <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="text"
-                                    placeholder="Enter image url"
+                                    placeholder="Insira uma imagem"
                                     value={image}
                                     required
                                     onChange={(e) => setImage(e.target.value)}
                                 ></Form.Control>
                                 <Form.File
                                     id='image-file'
-                                    label='Choose File'
+                                    label='Escolher arquivo'
                                     custom
                                     onChange={uploadFileHandler}
                                 ></Form.File>
                                 {uploading && <Loader />}
                             </Form.Group>
                             <Form.Group controlId='phonenumber'>
-                                <Form.Label>Phone Number <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Numero de telefone<span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="phonenumber"
-                                    placeholder="Enter phonenumber"
+                                    placeholder="Insira o numero de telefone"
                                     value={phonenumber}
                                     required
                                     onChange={(e) => setPhonenumber(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='description'>
-                                <Form.Label>Description <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Descrição <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     as="textarea" rows={3}
                                     type="description"
-                                    placeholder="Enter description"
+                                    placeholder="Insira uma descrição"
                                     value={description}
                                     required
                                     onChange={(e) => setDescription(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <br />
-                            <Button type="submit" variant="primary">Submit</Button>
+                            <Button type="submit" variant="primary">Enviar</Button>
                         </Col>
                     </Row>
                 </Form>

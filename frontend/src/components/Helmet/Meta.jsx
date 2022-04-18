@@ -13,7 +13,7 @@ const Meta = ({ title, description, keywords }) => {
 
 Meta.defaultProps = {
     title: 'Bem vindo ao AgroBras',
-    description: 'Eccomerce voltado a agricultores e clientes domesticos de todo o brasil',
+    description: 'Eccomerce voltado a agricultores e consumidores domesticos de todo o brasil',
     keywords: 'agricultura, agricultor, departamento de agricultura'
 }
 

@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {
-    Form,
-    Button,
-    Row,
-    Col
-} from 'react-bootstrap'
+import { Form, Button, Row, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../Message/Message'
 import Loader from '../Loader/Loader'
@@ -38,14 +33,14 @@ const LoginComponent = ({ location, history }) => {
     return (
         <FormContainer>
             <Meta
-                title="Agroic | Sign In"
+                title="AgroBras | Entrar"
             />
-            <h1 style={{ marginTop: '120px' }}>Sign In</h1>
+            <h1 style={{ marginTop: '120px' }}>Entrar</h1>
             { error && <Message variant='danger'>{error}</Message>}
             { loading && <Loader />}
             <Form onSubmit={submitHandler}>
                 <Form.Group controlId='email'>
-                    <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                    <Form.Label>E-mail <span style={{ color: 'red' }}>*</span></Form.Label>
                     <Form.Control
                         type="nic"
                         placeholder="Enter email or NIC"
@@ -55,20 +50,20 @@ const LoginComponent = ({ location, history }) => {
                     ></Form.Control>
                 </Form.Group>
                 <Form.Group controlId='password'>
-                    <Form.Label>Password <span style={{ color: 'red' }}>*</span></Form.Label>
+                    <Form.Label>Senha <span style={{ color: 'red' }}>*</span></Form.Label>
                     <Form.Control
                         type="password"
-                        placeholder="Enter password"
+                        placeholder="Insira a senha"
                         value={password}
                         required
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Button type="submit" variant="primary">Sign In</Button>
+                <Button type="submit" variant="primary">Entrar</Button>
             </Form>
             <Row className='py-3'>
                 <Col style={{ marginBottom: '30px' }}>
-                    New Customer? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Register</Link>
+                    Novo cliente? <Link to={redirect ? `/register?redirect=${redirect}` : '/register'}>Cadastrar</Link>
                 </Col>
             </Row>
         </FormContainer>

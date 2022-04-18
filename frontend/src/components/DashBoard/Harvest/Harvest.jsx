@@ -1,11 +1,6 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import {
-    Table,
-    Button,
-    Container,
-    Image
-} from 'react-bootstrap'
+import { Table, Button, Container, Image } from 'react-bootstrap'
 import { Scrollbar } from "react-scrollbars-custom";
 import { useHistory } from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
@@ -41,13 +36,13 @@ const Harvest = () => {
                             <Table style={{ marginBottom: '50px', marginTop: "5px" }} striped bordered hover responsive className='table-sm'>
                                 <thead style={{ fontWeight: "bold" }}>
                                     <tr>
-                                        <td>NAME</td>
-                                        <td>ADDRESS</td>
-                                        <td>IMAGE</td>
-                                        <td>DESCRPTION</td>
-                                        <td>CONTACT</td>
-                                        <td>CROP</td>
-                                        <td>MORE</td>
+                                        <td>NOME</td>
+                                        <td>ENDEREÇO</td>
+                                        <td>IMAGEM</td>
+                                        <td>DESCRIÇÃO</td>
+                                        <td>CONTATO</td>
+                                        <td>CATEGORIA</td>
+                                        <td>MAIS</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -75,7 +70,7 @@ const Harvest = () => {
                                                                 <Button
                                                                     disabled
                                                                     variant="danger"
-                                                                    className="btn-sm mr-2">Reviewed
+                                                                    className="btn-sm mr-2">Revisado
                                                                     </Button>
                                                             </LinkContainer>
                                                         ) : (
@@ -83,7 +78,7 @@ const Harvest = () => {
                                                                     <Button
                                                                         variant="primary"
                                                                         className="btn-sm mr-2">
-                                                                        <i className="fas fa-eye"></i> Review
+                                                                        <i className="fas fa-eye"></i> Revisar
                                                                     </Button>
                                                                 </LinkContainer>
                                                             )

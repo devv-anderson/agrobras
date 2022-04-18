@@ -1,9 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Form,
-    Button,
-    Col,
-} from 'react-bootstrap'
+import { Form, Button, Col } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import CheckoutSteps from './../../components/CheckoutSteps/CheckoutSteps'
 import FormContainer from '../../components/FormContainer/FormContainer'
@@ -33,18 +29,18 @@ const PaymentScreen = ({ history }) => {
         <div style={{ marginTop: '100px' }}>
             <FormContainer>
                 <Meta
-                    title="Agroic | Payment"
+                    title="AgroBras | Pagamento"
                 />
                 <CheckoutSteps step1 step2 step3 />
-                <h1>Payment Method</h1>
+                <h1>Metodo de Pagamento</h1>
                 <Form onSubmit={submitHandler} style={{ marginBottom: '40px' }}>
                     <Form.Group>
-                        <Form.Label as='legend'>Select Method</Form.Label>
+                        <Form.Label as='legend'>Selecione o Metodo</Form.Label>
 
                         <Col>
                             <Form.Check
                                 type='radio'
-                                label='Paypal or Credit Card'
+                                label='Paypal or cartão de credito'
                                 id='paypal'
                                 name='paymentMethod'
                                 value='PayPal'
@@ -62,7 +58,7 @@ const PaymentScreen = ({ history }) => {
                             ></Form.Check>
                         </Col>
                     </Form.Group>
-                    <Button type='submit'>Continue</Button>
+                    <Button type='submit'>Continuar</Button>
                 </Form>
             </FormContainer>
         </div>

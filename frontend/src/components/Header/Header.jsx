@@ -21,7 +21,7 @@ const Header = () => {
         <Navbar collapseOnSelect expand="lg" fixed="top">
             <LinkContainer to="/">
                 <Navbar.Brand className="nav-cal" >
-                    <Image width="80px"src="/Logo.png" />
+                    <Image width="90px"src="/agrobras.jpg" />
                 </Navbar.Brand>
             </LinkContainer>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -34,7 +34,7 @@ const Header = () => {
                         <Nav.Link className="nav-cal">AGRICULTOR</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/consumer">
-                        <Nav.Link className="nav-cal">CLIENTE</Nav.Link>
+                        <Nav.Link className="nav-cal">CONSUMIDOR</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="login?redirect=supplier">
                         <Nav.Link className="nav-cal">VENDEDOR</Nav.Link>

@@ -8,15 +8,15 @@ const HarvestScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Harvest"
+                title="AgroBras | Admin Harvest"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>Harvest</h4>
+                        <h4>Colheita</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>Farmers Products</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Produtos dos Agricultores </h4>
                     </Col>
                 </Row>
                 <Row>

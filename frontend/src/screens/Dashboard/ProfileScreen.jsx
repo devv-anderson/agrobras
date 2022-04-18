@@ -8,15 +8,15 @@ const ProfileScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Profile"
+                title="AgroBras | Admin Perfil"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>Admin Profile</h4>
+                        <h4>Admin Perfil</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>Edit Profile</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Editar Perfil</h4>
                     </Col>
                 </Row>
                 <Row>

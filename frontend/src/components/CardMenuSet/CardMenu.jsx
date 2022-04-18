@@ -1,11 +1,5 @@
 import React from 'react'
-import {
-    Container,
-    Row,
-    Card,
-    CardDeck,
-    Button
-} from 'react-bootstrap'
+import { Container, Row, Card, CardDeck, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import './CardMenuStyles.css'
 
@@ -15,32 +9,32 @@ const CardMenu = () => {
             <CardDeck className='card-deck'>
                 <Card border='primary'>
                     <Card.Body>
-                        <Card.Title className='title'>Farmer</Card.Title>
-                        <Card.Text className='card-text'>If you are a farmer then you are at perfect platfrom from where you can order all of your farming related products and you can sell your production also.</Card.Text>
+                        <Card.Title className='title'>Agricultor</Card.Title>
+                        <Card.Text className='card-text'>Se você é um agricultor, essa é a plataforma perfeita para encomendar todos os seus produtos relacionados à agricultura.</Card.Text>
                         <Link to='/farmer'>
-                            <Button variant="success" className="btn-explore btn-md m-2">EXPLORE MORE</Button>
+                            <Button variant="success" className="btn-explore btn-md m-2">VER MAIS</Button>
                         </Link>
                     </Card.Body>
                 </Card>
                 <Card border='primary'>
                     <Card.Body>
-                        <Card.Title className='title'>Supplier</Card.Title>
+                        <Card.Title className='title'>Vendedor</Card.Title>
                         <Card.Text className='card-text'>
-                            Sell your wide variety of products related to farming, through our platform. We have millions of farmers connected from all parts of country.
+                            Agora ficou mais simples e facil ofertar sua variedade de produtos, faça isso atraves de nossa plataforma.         
                         </Card.Text>
                         <Link to='login?redirect=supplier'>
-                            <Button variant="success" className="btn-explore btn-md m-2">EXPLORE MORE</Button>
+                            <Button variant="success" className="btn-explore btn-md m-2">VER MAIS</Button>
                         </Link>
                     </Card.Body>
                 </Card>
                 <Card border='primary'>
                     <Card.Body>
-                        <Card.Title className='title'>Consumer</Card.Title>
+                        <Card.Title className='title'>Consumidor</Card.Title>
                         <Card.Text className='card-text'>
-                            No need to visit field to get grains!!! Just order here and and get all kinds of grains deliverd at your doorstep. Why to wait? Go and order.
+                           Não há necessidade de ir até o campo para obter grãos, basta encomendar aqui e receba na comodidade do seu lar.
                         </Card.Text>
                         <Link to='/consumer'>
-                            <Button variant="success" className="btn-explore btn-md m-2">EXPLORE MORE</Button>
+                            <Button variant="success" className="btn-explore btn-md m-2">VER MAIS</Button>
                         </Link>
                     </Card.Body>
                 </Card>

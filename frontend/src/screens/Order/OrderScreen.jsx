@@ -1,15 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
-import {
-    Container,
-    Row,
-    Col,
-    ListGroup,
-    Image,
-    Card,
-    Button
-} from 'react-bootstrap'
+import { Container, Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Loader from './../../components/Loader/Loader'
@@ -45,7 +37,7 @@ const OrderScreen = ({ match }) => {
             history.push('/login')
         }
 
-        // Add paypal script to body
+        // Adicionado paypal script
         const addPayPalScript = async () => {
             const { data: clientId } = await axios.get('/api/config/paypal')
             const script = document.createElement('script')
@@ -84,7 +76,7 @@ const OrderScreen = ({ match }) => {
     return (
         <div>
             <Meta
-                title="Agroic | Order"
+                title="AgroBras | Pedido"
             />
             {
                 loading
@@ -92,45 +84,45 @@ const OrderScreen = ({ match }) => {
                     : error ? <Message variant="danger">{error}</Message>
                         : (
                             <Container style={{ marginTop: '120px' }}>
-                                <h2>Order {order._id}</h2>
+                                <h2>Pedido {order._id}</h2>
                                 <Row>
                                     <Col md={8}>
                                         <ListGroup variant='flush' className="mb-3">
                                             <ListGroup.Item>
-                                                <h1>Shipping</h1>
+                                                <h1>Envio</h1>
                                                 <p>
-                                                    <strong>Name: </strong>{order.user.name}
+                                                    <strong>Nome: </strong>{order.user.name}
                                                 </p>
                                                 <p>
-                                                    <strong>Email / NIC: </strong>
+                                                    <strong>E-mail: </strong>
                                                     <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
                                                 </p>
                                                 <p>
-                                                    <strong>Address : </strong>
+                                                    <strong>Endereço : </strong>
                                                     {order.shippingAddress.address}, {order.shippingAddress.city}{' '}
                                                     {order.shippingAddress.postalCode},{' '}
                                                     {order.shippingAddress.country}
                                                 </p>
                                                 {order.isDelivered
-                                                    ? <Message variant="success">Delivered on {order.deliveredAt}</Message>
-                                                    : <Message variant="danger">Not Delivered</Message>
+                                                    ? <Message variant="success">Enviado em {order.deliveredAt}</Message>
+                                                    : <Message variant="danger">Não Enviado</Message>
                                                 }
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h2>Payment Method</h2>
+                                                <h2>Metodo de Pagamento</h2>
                                                 <p>
-                                                    <strong>Method : </strong>
+                                                    <strong>Metodo : </strong>
                                                     {order.paymentMethod}
                                                 </p>
                                                 {order.isPaid
-                                                    ? <Message variant="success">Paid on {order.paidAt}</Message>
-                                                    : <Message variant="danger">Not Paid</Message>
+                                                    ? <Message variant="success">Pago em {order.paidAt}</Message>
+                                                    : <Message variant="danger">Não Pago</Message>
                                                 }
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h2>Order Items</h2>
+                                                <h2>Pedidos</h2>
                                                 {order.length === 0
-                                                    ? <Message>Order is empty</Message>
+                                                    ? <Message>Pedido esta vazio</Message>
                                                     : (
                                                         <ListGroup variant="flush">
                                                             {
@@ -160,29 +152,29 @@ const OrderScreen = ({ match }) => {
                                         <Card>
                                             <ListGroup variant="flush">
                                                 <ListGroup.Item>
-                                                    <h2>Order Summary</h2>
+                                                    <h2>Resumo do Pedido</h2>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Total Price</Col>
-                                                        <Col>{`RS. ${(order.totalPrice - (order.taxPrice + order.shippingPrice).toFixed(2))}`}</Col>
+                                                        <Col>Preço Total</Col>
+                                                        <Col>{`RS ${(order.totalPrice - (order.taxPrice + order.shippingPrice).toFixed(2))}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Shipping</Col>
-                                                        <Col>{`RS. ${order.shippingPrice}`}</Col>
+                                                        <Col>Envio</Col>
+                                                        <Col>{`RS ${order.shippingPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Tax</Col>
-                                                        <Col>{`RS. ${order.taxPrice}`}</Col>
+                                                        <Col>Taxa</Col>
+                                                        <Col>{`RS ${order.taxPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item><ListGroup.Item>
                                                     <Row>
                                                         <Col>Total</Col>
-                                                        <Col>{`RS. ${order.totalPrice}`}</Col>
+                                                        <Col>{`RS ${order.totalPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 {
@@ -206,7 +198,7 @@ const OrderScreen = ({ match }) => {
                                                                 type='button'
                                                                 className='btn btn-block'
                                                                 onClick={deliverHandler}
-                                                            > Mark as delivered </Button>
+                                                            > Marcar como enviado </Button>
                                                         </ListGroup.Item>
                                                     )
                                                 }

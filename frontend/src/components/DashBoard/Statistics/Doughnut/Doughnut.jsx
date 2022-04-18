@@ -7,7 +7,7 @@ import Loader from './../../../../components/Loader/Loader'
 import { listSupplierProducts } from './../../../../actions/supplierProduct'
 
 const data = {
-    labels: ['paddy', 'seeds', 'fruits'],
+    labels: ['arroz', 'sementes', 'frutas'],
     datasets: [{
         data: [2, 1, 3],
         backgroundColor: [
@@ -44,7 +44,7 @@ const DoughnutComponent = () => {
 
     return (
         <>
-            <h4 style={{ marginTop: "40px", textAlign: "center" }}>Suppliers</h4>
+            <h4 style={{ marginTop: "40px", textAlign: "center" }}>Vendedores</h4>
             {loadingProducts ? <Loader />
                 : errorProducts ? <Message variant='danger'>{errorProducts}</Message>
                     : (

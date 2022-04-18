@@ -8,15 +8,15 @@ const ProductListScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Products"
+                title="AgroBras | Admin Produtos"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>Agroic Products</h4>
+                        <h4>AgroBras Produtos</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>Product List</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Lista de Produtos</h4>
                     </Col>
                 </Row>
                 <Row>

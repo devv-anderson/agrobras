@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import {
-    Form,
-    Button,
-} from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../../components/Message/Message'
 import Loader from '../../components/Loader/Loader'
@@ -53,41 +50,41 @@ const UserEditScreen = ({ match, history }) => {
     return (
         <>
             <Meta
-                title="Agroic | Admin User Edit"
+                title="AgroBras | Admin User Edit"
             />
             <FormContainer>
-                <h1 style={{ marginTop: '120px' }}>Edit User</h1>
-                <Link to='/admin/userList' className="btn btn-light my-2">GO BACK</Link>
+                <h1 style={{ marginTop: '120px' }}>Editar Usuario</h1>
+                <Link to='/admin/userList' className="btn btn-light my-2">VOLTAR</Link>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading ? <Loader /> : error ? <Message variant='danger'>{error}</Message>
                     : (
                         <Form onSubmit={submitHandler} style={{ marginBottom: '50px' }}>
                             <Form.Group controlId='name'>
-                                <Form.Label>Name <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="name"
-                                    placeholder="Enter name"
+                                    placeholder="Insira um nome"
                                     value={name}
                                     required
                                     onChange={(e) => setName(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='email'>
-                                <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>E-mail <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="nic"
-                                    placeholder="Enter email or NIC"
+                                    placeholder="Insira um e-mail"
                                     value={email}
                                     required
                                     onChange={(e) => setEmail(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='cropSelection'>
-                                <Form.Label>Crop Selection (optional)</Form.Label>
+                                <Form.Label>Categoria</Form.Label>
                                 <Form.Control
                                     type="cropSelection"
-                                    placeholder="Enter crop               "
+                                    placeholder="Ex: fruta, semente"
                                     value={cropSelection}
                                     onChange={(e) => setCropSelection(e.target.value)}
                                 ></Form.Control>
@@ -101,7 +98,7 @@ const UserEditScreen = ({ match, history }) => {
                                     onChange={(e) => setIsAdmin(e.target.checked)}
                                 ></Form.Check>
                             </Form.Group>
-                            <Button type="submit" variant="primary">Update</Button>
+                            <Button type="submit" variant="primary">Atualizar</Button>
                         </Form>
                     )
                 }

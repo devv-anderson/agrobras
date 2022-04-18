@@ -15,32 +15,32 @@ const SideBarComponents = () => {
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/profile'>
                     <ListGroup.Item className="border-0 item">
-                        <i className="fas icon-fas fa-user-alt"></i> Profile
+                        <i className="fas icon-fas fa-user-alt"></i> Perfil
                     </ListGroup.Item>
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/userlist'>
                     <ListGroup.Item className="border-0 item">
-                        <i className="fas icon-fas fa-users-cog"></i> User List
+                        <i className="fas icon-fas fa-users-cog"></i> Lista de Usuarios
                     </ListGroup.Item>
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/productlist'>
                     <ListGroup.Item className="border-0 item">
-                        <i className="fas icon-fas fa-list"></i>Product List
+                        <i className="fas icon-fas fa-list"></i>Lista de Produtos 
                     </ListGroup.Item>
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/orderlist'>
                     <ListGroup.Item className="border-0 item">
-                        <i className="fas icon-fas fa-sort-amount-up-alt"></i>Order List
+                        <i className="fas icon-fas fa-sort-amount-up-alt"></i>Lista de Pedidos
                     </ListGroup.Item>
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/supplierproducts'>
                     <ListGroup.Item className="border-0 item">
-                    <i className="fas icon-fas fa-seedling"></i>Harvest
+                    <i className="fas icon-fas fa-seedling"></i>Colheita
                     </ListGroup.Item>
                 </LinkContainer>
                 <LinkContainer className='link-contain' to='/admin/map'>
                     <ListGroup.Item className="border-0 item">
-                        <i className="fas icon-fas fa-map-marker-alt"></i>Map
+                        <i className="fas icon-fas fa-map-marker-alt"></i>Mapa
                     </ListGroup.Item>
                 </LinkContainer>
             </ListGroup>

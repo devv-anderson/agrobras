@@ -1,9 +1,5 @@
 import React, { useEffect } from 'react'
-import {
-    Table,
-    Container,
-    Button
-} from 'react-bootstrap'
+import { Table, Container, Button } from 'react-bootstrap'
 import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../../../components/Message/Message'
@@ -38,12 +34,12 @@ const OrderListScreen = ({ history }) => {
                                 <thead>
                                     <tr>
                                         <td>ID</td>
-                                        <td>USER</td>
-                                        <td>DATE</td>
-                                        <td>TOTAL PRICE</td>
-                                        <td>PAID</td>
-                                        <td>DELIVERED</td>
-                                        <td>MORE</td>
+                                        <td>USUARIO</td>
+                                        <td>DATA</td>
+                                        <td>PREÇO TOTAL</td>
+                                        <td>PAGO</td>
+                                        <td>ENVIADO</td>
+                                        <td>MAIS</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -72,7 +68,7 @@ const OrderListScreen = ({ history }) => {
                                                 <td>
                                                     <LinkContainer to={`/order/${order._id}/edit`}>
                                                         <Button varinat='light' className='btn-sm'>
-                                                            Details
+                                                            Detalhes
                                                         </Button>
                                                     </LinkContainer>
                                                 </td>

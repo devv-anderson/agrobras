@@ -37,10 +37,10 @@ const LendMachineProduct = ({ history, match }) => {
     return (
         <div className="productScreen">
             <Meta
-                title="Agroic | Machine"
+                title="AgroBras | Maquinas de Colheitas"
             />
             <Container>
-                <Link className="btn btn-go-back btn-dark" to="/farmers/lendMachines">GO BACK</Link>
+                <Link className="btn btn-go-back btn-dark" to="/farmers/lendMachines">VOLTAR</Link>
                 {
                     loading
                         ? <Loader />
@@ -57,13 +57,13 @@ const LendMachineProduct = ({ history, match }) => {
                                                 <h2>{productLendMachines.name}</h2>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Price: {productLendMachines.price}</h4>
+                                                <h4>Preço: {productLendMachines.price}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                            <p><span style={{fontWeight:"bold"}}>Description:</span><br /> {productLendMachines.description}</p>
+                                            <p><span style={{fontWeight:"bold"}}>Descrição:</span><br /> {productLendMachines.description}</p>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <p>Quantity Available: {productLendMachines.quantity}</p>
+                                                <p>Quantidade Disponivel: {productLendMachines.quantity}</p>
                                             </ListGroup.Item>
                                         </ListGroup>
                                     </Col>
@@ -72,13 +72,13 @@ const LendMachineProduct = ({ history, match }) => {
                                             <ListGroup variant='flush'>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Machine Power:</Col>
+                                                        <Col>Potência:</Col>
                                                         <Col><strong>{productLendMachines.machine_power}</strong></Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Target Plant:</Col>
+                                                        <Col>Planta Alvo:</Col>
                                                         <Col>
                                                             {productLendMachines.target_plant}
                                                         </Col>
@@ -88,7 +88,7 @@ const LendMachineProduct = ({ history, match }) => {
                                                     productLendMachines.quantity > 0 && (
                                                         <ListGroup.Item>
                                                             <Row>
-                                                                <Col>Qty</Col>
+                                                                <Col>Quantidade</Col>
                                                                 <Col>
                                                                     <Form.Control as='select' value={qty} onChange={(e => setQty(e.target.value))}>
                                                                         {
@@ -106,7 +106,7 @@ const LendMachineProduct = ({ history, match }) => {
                                                     )
                                                 }
                                                 <ListGroup.Item>
-                                                    <Button type="button" className="btn btn-block" onClick={addtoCartHandler} >Add To Cart</Button>
+                                                    <Button type="button" className="btn btn-block" onClick={addtoCartHandler} >Adicionar ao carrinho</Button>
                                                 </ListGroup.Item>
                                             </ListGroup>
                                         </Card>

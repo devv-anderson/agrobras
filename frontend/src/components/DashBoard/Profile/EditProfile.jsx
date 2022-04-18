@@ -1,11 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {
-    Form,
-    Button,
-    Row,
-    Col,
-    Container,
-} from 'react-bootstrap'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../../../components/Message/Message'
 import Loader from './../../../components/Loader/Loader'
@@ -50,7 +44,7 @@ const EditProfile = ({ history }) => {
     const submitHandler = (e) => {
         e.preventDefault()
         if (password !== confirmPassword) {
-            setMessage('Passwords do not match')
+            setMessage('Senhas não combinam')
         } else {
             dispatch(updateUserProfile({ id: user._id, name, email, password, cropSelection }))
         }
@@ -60,36 +54,36 @@ const EditProfile = ({ history }) => {
         <Container style={{ marginBottom: '50px', marginTop: '20px' }}>
             {message && <Message variant='danger'>{message}</Message>}
             {error && <Message variant='danger'>{error}</Message>}
-            {success && <Message variant='success'>Profile Updated!</Message>}
+            {success && <Message variant='success'>Perfil Atualizado!</Message>}
             {loading && <Loader />}
             <Form onSubmit={submitHandler}>
                 <Row>
                     <Col md={5}>
                         <Form.Group controlId='name'>
-                            <Form.Label>Name <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="name"
-                                placeholder="Enter name"
+                                placeholder="Insira o nome"
                                 value={name}
                                 required
                                 onChange={(e) => setName(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='email'>
-                            <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>E-mail <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="email"
-                                placeholder="Enter email or NIC"
+                                placeholder="Insira o e-mail"
                                 value={email}
                                 required
                                 onChange={(e) => setEmail(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='cropSelection'>
-                            <Form.Label>Crop Selection (optional)</Form.Label>
+                            <Form.Label>Categoria</Form.Label>
                             <Form.Control
                                 type="cropSelection"
-                                placeholder="Enter cropSelection"
+                                placeholder="Ex: fruta, semente"
                                 value={cropSelection}
                                 onChange={(e) => setCropSelection(e.target.value)}
                             ></Form.Control>
@@ -97,26 +91,26 @@ const EditProfile = ({ history }) => {
                     </Col>
                     <Col md={5}>
                         <Form.Group controlId='password'>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Senha</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Enter password"
+                                placeholder="Insira a senha"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='confirmPassword'>
-                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Label>Confirme a senha</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Confirm password"
+                                placeholder="Confirme a senha"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                     </Col>
                 </Row>
-                <Button type="submit" variant="primary">Update</Button>
+                <Button type="submit" variant="primary">Atualizar</Button>
             </Form>
         </Container>
     )

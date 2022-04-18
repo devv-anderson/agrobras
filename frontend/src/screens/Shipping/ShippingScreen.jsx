@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
-import {
-    Form,
-    Button,
-} from 'react-bootstrap'
+import { Form, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import CheckoutSteps from './../../components/CheckoutSteps/CheckoutSteps'
 import FormContainer from '../../components/FormContainer/FormContainer'
@@ -31,52 +28,52 @@ const ShippingScreen = ({ history }) => {
         <div style={{ marginTop: '100px' }}>
             <FormContainer>
                 <Meta
-                    title="Agroic | Shipping"
+                    title="AgroBras | Envio"
                 />
                 <CheckoutSteps step1 step2 />
-                <h1>Shipping</h1>
+                <h1>Envio</h1>
                 <Form onSubmit={submitHandler} style={{ marginBottom: '40px' }}>
                     <Form.Group controlId='address'>
-                        <Form.Label>Address <span style={{ color: 'red' }}>*</span></Form.Label>
+                        <Form.Label>Endereço <span style={{ color: 'red' }}>*</span></Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter address"
+                            placeholder="Insira um endereço"
                             value={address}
                             required
                             onChange={(e) => setAddress(e.target.value)}
                         ></Form.Control>
                     </Form.Group>
                     <Form.Group controlId='city'>
-                        <Form.Label>City <span style={{ color: 'red' }}>*</span></Form.Label>
+                        <Form.Label>Cidade <span style={{ color: 'red' }}>*</span></Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter City"
+                            placeholder="Insira uma cidade"
                             value={city}
                             required
                             onChange={(e) => setCity(e.target.value)}
                         ></Form.Control>
                     </Form.Group>
                     <Form.Group controlId='postalCode'>
-                        <Form.Label>Postal Code <span style={{ color: 'red' }}>*</span></Form.Label>
+                        <Form.Label>CEP <span style={{ color: 'red' }}>*</span></Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter postal code"
+                            placeholder="Insira um CEP"
                             value={postalCode}
                             required
                             onChange={(e) => setPostalCode(e.target.value)}
                         ></Form.Control>
                     </Form.Group>
                     <Form.Group controlId='country'>
-                        <Form.Label>Country <span style={{ color: 'red' }}>*</span></Form.Label>
+                        <Form.Label>Pais <span style={{ color: 'red' }}>*</span></Form.Label>
                         <Form.Control
                             type="text"
-                            placeholder="Enter Country"
+                            placeholder="Insira o pais"
                             value={country}
                             required
                             onChange={(e) => setCountry(e.target.value)}
                         ></Form.Control>
                     </Form.Group>
-                    <Button type='submit'>Continue</Button>
+                    <Button type='submit'>Continar</Button>
                 </Form>
             </FormContainer>
         </div>

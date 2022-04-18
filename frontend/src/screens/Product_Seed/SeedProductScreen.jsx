@@ -69,10 +69,10 @@ const SeedProductScreen = ({ history, match }) => {
     return (
         <div className="productScreen">
             <Meta
-                title="Agroic | Seed"
+                title="AgroBras | Semente"
             />
             <Container>
-                <Link className="btn btn-go-back btn-dark" to="/farmers/purchaseSeeds">GO BACK</Link>
+                <Link className="btn btn-go-back btn-dark" to="/farmers/purchaseSeeds">Voltar</Link>
                 {
                     loading ?
                         <Loader />
@@ -95,7 +95,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                 <h4>Price: {productSeed.price}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <p><span style={{fontWeight:"bold"}}>Description:</span><br /> {productSeed.description}</p>
+                                                <p><span style={{fontWeight:"bold"}}>Descrição:</span><br /> {productSeed.description}</p>
                                             </ListGroup.Item>
                                         </ListGroup>
                                     </Col>
@@ -104,7 +104,7 @@ const SeedProductScreen = ({ history, match }) => {
                                             <ListGroup variant='flush'>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Price:</Col>
+                                                        <Col>Preço:</Col>
                                                         <Col><strong>RS. {productSeed.price}</strong></Col>
                                                     </Row>
                                                 </ListGroup.Item>
@@ -120,7 +120,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                     productSeed.countInStock > 0 && (
                                                         <ListGroup.Item>
                                                             <Row>
-                                                                <Col>Qty</Col>
+                                                                <Col>Quantidade</Col>
                                                                 <Col>
                                                                     <Form.Control as='select' value={qty} onChange={(e => setQty(e.target.value))}>
                                                                         {

@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import {
-    Table,
-    Button,
-    Container,
-    Col,
-    Row
-} from 'react-bootstrap'
+import { Table, Button, Container, Col, Row } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../../../components/Message/Message'
@@ -58,11 +52,11 @@ const SeedList = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 style={{ marginBottom: '20px' }}>Lend Machines</h1>
+                    <h1 style={{ marginBottom: '20px' }}>Maquinas Pesadas</h1>
                 </Col>
                 <Col className="text-right">
                     <Button className='my-3' onClick={createMachineProductHandler}>
-                        <i className='fas fa-plus'></i> Create Product
+                        <i className='fas fa-plus'></i> Criar Produto
                     </Button>
                 </Col>
             </Row>
@@ -77,10 +71,10 @@ const SeedList = () => {
                             <thead>
                                 <tr>
                                     <td>ID</td>
-                                    <td>NAME</td>
-                                    <td>TARGET PLANT</td>
-                                    <td>MACHINE POWER</td>
-                                    <td>EDIT / DELETE</td>
+                                    <td>NOME</td>
+                                    <td>PLANTA ALVO</td>
+                                    <td>POTENCIA</td>
+                                    <td>EDITAR / DELETAR</td>
                                 </tr>
                             </thead>
                             <tbody>

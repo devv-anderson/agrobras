@@ -28,10 +28,10 @@ const BarChart = () => {
 
 
     const data = {
-        labels: ['December', 'January'],
+        labels: ['Dezembro', 'Janeiro'],
         datasets: [
             {
-                label: 'Order List',
+                label: 'Lista de pedidos',
                 backgroundColor: 'rgba(255,99,132,0.2)',
                 borderColor: 'rgba(255,99,132,1)',
                 borderWidth: 1,
@@ -44,7 +44,7 @@ const BarChart = () => {
 
     return (
         <Container style={{ marginTop: "40px" }}>
-            <h4>Orders</h4>
+            <h4>Pedidos</h4>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     : (

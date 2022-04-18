@@ -50,7 +50,7 @@ const StatCards = () => {
                         <Col>
                             <Row>
                                 <Card.Text>
-                                    <span className="card-text-name">All Users</span>
+                                    <span className="card-text-name">Usuarios</span>
                                 </Card.Text>
                             </Row>
                             <Row>
@@ -72,7 +72,7 @@ const StatCards = () => {
                         <Col>
                             <Row>
                                 <Card.Text>
-                                    <span className="card-text-name">All Orders</span>
+                                    <span className="card-text-name">Pedidos</span>
                                 </Card.Text>
                             </Row>
                             <Row>
@@ -94,7 +94,7 @@ const StatCards = () => {
                         <Col>
                             <Row>
                                 <Card.Text>
-                                    <span className="card-text-name">Delivered</span>
+                                    <span className="card-text-name">Envio</span>
                                 </Card.Text>
                             </Row>
                             <Row>

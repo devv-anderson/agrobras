@@ -35,10 +35,10 @@ const Farmer_ProductSeedScreen = () => {
 
         <div className="ProductSeedScreen">
             <Meta
-                title="Agroic | Farmer Seeds"
+                title="AgroBras | Agricultores sementes"
             />
             <Container>
-                <h1 className="p-3" style={{ textAlign: 'center' }}>Latest Seeds</h1>
+                <h1 className="p-3" style={{ textAlign: 'center' }}>Sementes Recentes</h1>
                 {
                     loading
                         ? <Loader />

@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import {
-    Form,
-    Button,
-    Container,
-    Row,
-    Col
-} from 'react-bootstrap'
+import { Form, Button, Container, Row, Col } from 'react-bootstrap'
 import { Link, useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../../../components/Message/Message'
@@ -98,60 +92,60 @@ const ConsumerListEdit = ({ match }) => {
     return (
         <Container style={{ marginBottom: '50px' }}>
             <Meta
-                title="Agroic | Admin Consumer Edit"
+                title="AgroBras | Admin Consumidor Editar"
             />
             <FormContainer>
-                <h2 style={{ marginTop: '120px', textAlign: 'center' }}>Consumer Profile</h2>
+                <h2 style={{ marginTop: '120px', textAlign: 'center' }}>Consumidor Perfil</h2>
                 <Link to='/admin/productlist' className='btn btn-light my-3'>
-                    GO BACK
+                    VOLTAR
                 </Link>
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
                 {loading && <Loader />}
                 {error && <Message variant='danger'>{error}</Message>}
-                {successUpdate && <Message variant='success'>Profile Updated!</Message>}
+                {successUpdate && <Message variant='success'>Pefil Atualizado!</Message>}
                 <Form onSubmit={submitHandler}>
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId='prodname'>
-                                <Form.Label>Name</Form.Label>
+                                <Form.Label>Nome</Form.Label>
                                 <Form.Control
                                     type="prodName"
-                                    placeholder="Enter Product Name"
+                                    placeholder="Insira o nome do produto"
                                     value={prodName}
                                     onChange={(e) => setProdName(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='image'>
-                                <Form.Label>Image</Form.Label>
+                                <Form.Label>Imagem</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    placeholder="Enter image url"
+                                    placeholder="Insira a imagem"
                                     value={image}
                                     onChange={(e) => setImage(e.target.value)}
                                 ></Form.Control>
                                 <Form.File
                                     id='image-file'
-                                    label='Choose File'
+                                    label='Escolher Arquivo'
                                     custom
                                     onChange={uploadFileHandler}
                                 ></Form.File>
                                 {uploading && <Loader />}
                             </Form.Group>
                             <Form.Group controlId='sellerName'>
-                                <Form.Label>Seller Name</Form.Label>
+                                <Form.Label>Nome do Vendedor</Form.Label>
                                 <Form.Control
                                     type="sellerName"
-                                    placeholder="Enter seller name"
+                                    placeholder="Insira o nome do vendedor"
                                     value={sellerName}
                                     onChange={(e) => setSellerName(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='price'>
-                                <Form.Label>Price</Form.Label>
+                                <Form.Label>Preço</Form.Label>
                                 <Form.Control
                                     type="price"
-                                    placeholder="Enter price"
+                                    placeholder="Insira o preço"
                                     value={price}
                                     onChange={(e) => setPrice(e.target.value)}
                                 ></Form.Control>
@@ -159,33 +153,33 @@ const ConsumerListEdit = ({ match }) => {
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId='prodSize'>
-                                <Form.Label>Product Size</Form.Label>
+                                <Form.Label>Peso</Form.Label>
                                 <Form.Control
                                     type="prodSize"
-                                    placeholder="Enter product size"
+                                    placeholder="Insira o peso"
                                     value={prodSize}
                                     onChange={(e) => setProdSize(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='quantity'>
-                                <Form.Label>Quantity</Form.Label>
+                                <Form.Label>Quantidade</Form.Label>
                                 <Form.Control
                                     type="countInStock"
-                                    placeholder="Enter qunatity"
+                                    placeholder="Insira a quantidade"
                                     value={quantity}
                                     onChange={(e) => setQuantity(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='avalaibleLoc'>
-                                <Form.Label>Machine Power</Form.Label>
+                                <Form.Label>Potencia</Form.Label>
                                 <Form.Control
                                     type="avalaibleLoc"
-                                    placeholder="Enter avalaible location"
+                                    placeholder="Insira a localização"
                                     value={avalaibleLoc}
                                     onChange={(e) => setAvalaibleLoc(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
-                            <Button type="submit" variant="primary">Update</Button>
+                            <Button type="submit" variant="primary">Atualizar</Button>
                         </Col>
                     </Row>
                 </Form>

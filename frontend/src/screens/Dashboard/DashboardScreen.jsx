@@ -8,7 +8,7 @@ const DashboardScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Dashboard"
+                title="AgroBras | Admin Dashboard"
             />
             <Container fluid>
                 <Row>
@@ -16,7 +16,7 @@ const DashboardScreen = () => {
                         <h4>Dashboard</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>Overall Statistics</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Estatisticas Gerais</h4>
                     </Col>
                 </Row>
                 <Row>

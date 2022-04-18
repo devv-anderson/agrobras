@@ -1,8 +1,5 @@
 import React from 'react'
-import {
-    Container,
-    Row,
-} from 'react-bootstrap'
+import { Container, Row } from 'react-bootstrap'
 import './listStyles.css'
 import { Scrollbar } from "react-scrollbars-custom";
 import SeedList from './SeedList/SeedList'

@@ -8,15 +8,15 @@ const MapScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Map"
+                title="AgroBras | Admin Mapa"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>Map</h4>
+                        <h4>Mapa</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>Farmers Harvest Map</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Mapa de Colheitas </h4>
                     </Col>
                 </Row>
                 <Row>

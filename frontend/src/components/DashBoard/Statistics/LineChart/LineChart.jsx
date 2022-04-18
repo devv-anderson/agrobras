@@ -6,10 +6,10 @@ import Loader from './../../../../components/Loader/Loader'
 import { listUsers } from './../../../../actions/userActions'
 
 const data = {
-    labels: ['December', 'January'],
+    labels: ['Dezembro', 'Janeiro'],
     datasets: [
         {
-            label: 'Users of Months',
+            label: 'Usuarios por mês',
             fill: false,
             lineTension: 0.1,
             backgroundColor: 'rgba(75,192,192,0.4)',
@@ -52,7 +52,7 @@ const LineChart = ({ history }) => {
 
     return (
         <>
-            <h4 style={{ marginTop: "40px", textAlign: "center" }}>Users</h4>
+            <h4 style={{ marginTop: "40px", textAlign: "center" }}>Usuarios</h4>
             {loading ? <Loader />
                 : error ? <Message variant='danger'>{error}</Message>
                     : (

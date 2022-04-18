@@ -39,12 +39,12 @@ const OrderListScreen = ({ history }) => {
                                 <thead>
                                     <tr>
                                         <td>ID</td>
-                                        <td>USER</td>
-                                        <td>DATE</td>
-                                        <td>TOTAL PRICE</td>
-                                        <td>PAID</td>
-                                        <td>DELIVERED</td>
-                                        <td>MORE</td>
+                                        <td>USUARIO</td>
+                                        <td>DATA</td>
+                                        <td>PREÇO TOTAL</td>
+                                        <td>PAGO</td>
+                                        <td>ENVIADO</td>
+                                        <td>MAIS</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -73,7 +73,7 @@ const OrderListScreen = ({ history }) => {
                                                 <td>
                                                     <LinkContainer to={`/order/${order._id}/edit`}>
                                                         <Button varinat='light' className='btn-sm'>
-                                                            Details
+                                                            Detalhes
                                                         </Button>
                                                     </LinkContainer>
                                                 </td>

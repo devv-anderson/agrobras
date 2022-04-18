@@ -1,12 +1,6 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import {
-    Table,
-    Button,
-    Row,
-    Col,
-    Container
-} from 'react-bootstrap'
+import { Table, Button, Row, Col, Container } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from './../../../../components/Message/Message'
@@ -63,11 +57,11 @@ const ConsumerList = () => {
         <Container>
             <Row>
                 <Col>
-                    <h1 style={{ marginBottom: '20px' }}>Consumer</h1>
+                    <h1 style={{ marginBottom: '20px' }}>Consumidor</h1>
                 </Col>
                 <Col className="text-right">
                     <Button className='my-3' onClick={createConsumerProductHandler}>
-                        <i className='fas fa-plus'></i> Create Product
+                        <i className='fas fa-plus'></i> Criar Produto
                     </Button>
                 </Col>
             </Row>
@@ -82,10 +76,10 @@ const ConsumerList = () => {
                             <thead>
                                 <tr>
                                     <td>ID</td>
-                                    <td>SELLER NAME</td>
-                                    <td>PRODUCT NAME</td>
-                                    <td>AVALAIBLE LOCATION</td>
-                                    <td>EDIT / DELETE</td>
+                                    <td>NOME DO VENDEDOR</td>
+                                    <td>NOME DO PRODUTO</td>
+                                    <td>LOCALIZAÇÃO</td>
+                                    <td>EDITAR / DELETAR</td>
                                 </tr>
                             </thead>
                             <tbody>

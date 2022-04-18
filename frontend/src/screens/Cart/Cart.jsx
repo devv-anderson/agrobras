@@ -33,15 +33,15 @@ const Cart = ({ match, location, history }) => {
     return (
         <Container style={{ marginTop: '100px', marginBottom: '50px' }}>
             <Meta
-                title="Agroic | Cart"
+                title="AgroBras | Carrinho"
             />
             <Row>
                 <Col md={8}>
-                    <h1>Shopping Cart</h1>
+                    <h1>Carrinho de compras</h1>
                     {
                         cartItems.length === 0 ? (
                             <Message variant='danger'>
-                                Your cart is empty <Link to='/'>GO BACK</Link>
+                                Seu carrinho esta vazio <Link to='/'>Voltar</Link>
                             </Message>
                         ) : (
                                 <ListGroup variant='flush' >
@@ -54,7 +54,7 @@ const Cart = ({ match, location, history }) => {
                                                 <Col md={3}>
                                                     <Link to={`/farmers/purchaseSeeds/${item.seed}`}>{item.name}</Link>
                                                 </Col>
-                                                <Col md={2}>RS.{item.price}</Col>
+                                                <Col md={2}>R$ {item.price}</Col>
                                                 <Col md={2}>
                                                     <Form.Control
                                                         as='select'
@@ -91,8 +91,8 @@ const Cart = ({ match, location, history }) => {
                     <Card style={{ marginTop: '50px' }}>
                         <ListGroup variant='flush'>
                             <ListGroup.Item>
-                                <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) items</h2>
-                                RS.{cartItems
+                                <h2>Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}) itens</h2>
+                                R${cartItems
                                     .reduce((acc, item) => acc + item.qty * item.price, 0)
                                     .toFixed(2)}
                             </ListGroup.Item>
@@ -103,7 +103,7 @@ const Cart = ({ match, location, history }) => {
                                     disabled={cartItems.length === 0}
                                     onClick={checkoutHandler}
                                 >
-                                    Proceed To Checkout
+                                    Ir para a checagem
                                 </Button>
                             </ListGroup.Item>
                         </ListGroup>

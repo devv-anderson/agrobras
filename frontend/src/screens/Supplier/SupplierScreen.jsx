@@ -1,7 +1,5 @@
 import React from 'react'
-import {
-    Container,
-} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import Meta from '../../components/Helmet/Meta';
 import AddSupplierProduct from '../../components/SupplierProduct/AddSupplierProduct';
 import './supplierStyles.css'
@@ -10,11 +8,12 @@ const SupplierScreen = () => {
     return (
         <Container className='supplierContainer'>
             <Meta
-                title="Agroic | Supplier"
+                title="AgroBras | Vendedor"
             />
-            <h1 className='title'>SUPPLIER</h1>
+            <h1 className='title'>VENDEDOR</h1>
             <h4 className="supplier-title">
-                Sell your wide variety of products related to farming, through our platform. We have millions of farmers connected from all parts of country.</h4>
+                Venda seus produtos atraves da melhor plataforma da atualidade, temos agricultores conectados de todas as partes do Brasil.
+            </h4>
             <br />
             <AddSupplierProduct />
         </Container>

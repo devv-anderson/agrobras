@@ -8,15 +8,15 @@ const UserListScreen = () => {
     return (
         <div style={{ marginTop: "110px" }}>
             <Meta
-                title="Agroic | Admin Users"
+                title="AgroBras | Admin Usuarios"
             />
             <Container fluid>
                 <Row>
                     <Col md={3}>
-                        <h4>Agroic Users</h4>
+                        <h4>AgroBras Usuarios</h4>
                     </Col>
                     <Col md={9}>
-                        <h4 style={{ marginLeft: "30px" }}>User List</h4>
+                        <h4 style={{ marginLeft: "30px" }}>Lista de Usuarios</h4>
                     </Col>
                 </Row>
                 <Row>

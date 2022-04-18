@@ -1,16 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
-import {
-    Col,
-    Container,
-    Row,
-    Image,
-    ListGroup,
-    Card,
-    Button,
-    Form
-} from 'react-bootstrap';
+import { Col, Container, Row, Image, ListGroup, Card, Button, Form } from 'react-bootstrap';
 import { getroductsDetails, createProductReview } from './../../actions/supplierProduct'
 import Loader from '../../components/Loader/Loader';
 import Message from '../../components/Message/Message';
@@ -38,7 +29,6 @@ const FarmerProduct = ({ history, match }) => {
 
         if (successReview) {
 
-            // history.push('/admin/dashboard')
         } else {
             if (!product.name || product._id !== userId) {
                 dispatch(getroductsDetails(userId))
@@ -58,10 +48,10 @@ const FarmerProduct = ({ history, match }) => {
     return (
         <div className="productScreen">
             <Meta
-                title="Agroic | Admin Farmer Review"
+                title="AgroBras | Admin Agricultor Revisão"
             />
             <Container>
-                <Link className="btn btn-go-back btn-dark" to="/admin/supplierproducts">GO BACK</Link>
+                <Link className="btn btn-go-back btn-dark" to="/admin/supplierproducts">VOLTAR</Link>
                 {
                     loading
                         ? <Loader />
@@ -75,18 +65,18 @@ const FarmerProduct = ({ history, match }) => {
                                     <Col md={4}>
                                         <ListGroup className="borderless" variant='flush'>
                                             <ListGroup.Item>
-                                                <h4>Name </h4>{product.name}
+                                                <h4>Nome </h4>{product.name}
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Address </h4> {product.address}
+                                                <h4>Endereço </h4> {product.address}
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Product Description<br /></h4> {product.description}
+                                                <h4>Descrição do Produto<br /></h4> {product.description}
                                             </ListGroup.Item>
                                             {
                                                 product.phonenumber ? (
                                                     <ListGroup.Item>
-                                                        <h4> Contact Number<br /></h4>
+                                                        <h4> Numero de Contato<br /></h4>
                                                         <a rel="noreferrer" target='_blank' href={`https://wa.me/${product.phonenumber}`}>
                                                             {product.phonenumber}
                                                         </a>
@@ -96,12 +86,12 @@ const FarmerProduct = ({ history, match }) => {
                                             <ListGroup.Item>
                                                 <Row>
                                                     <Col md={6}>
-                                                        <h4>Crop </h4>{product.cropSelection}
+                                                        <h4>Categoria </h4>{product.cropSelection}
                                                     </Col>
                                                     {
                                                         product.storage ? (
                                                             <Col md={6}>
-                                                                <h4>Quantity </h4>{product.storage} kg
+                                                                <h4>Quantidade </h4>{product.storage} kg
                                                             </Col>
                                                         ) : ''
                                                     }
@@ -113,10 +103,10 @@ const FarmerProduct = ({ history, match }) => {
                                         <Card>
                                             <ListGroup>
                                                 <ListGroup.Item>
-                                                    <p>Write a Farmer Review</p>
+                                                    <p>Escreva uma avaliação para o agricultor</p>
                                                     {successReview && (
                                                         <Message variant='success'>
-                                                            Review submitted successfully
+                                                            Avalização Enviado com Sucesso
                                                         </Message>
                                                     )}
                                                     {loadingReview && <Loader />}
@@ -126,22 +116,22 @@ const FarmerProduct = ({ history, match }) => {
                                                     {userInfo && userInfo.isAdmin ? (
                                                         <Form onSubmit={submitHandler}>
                                                             <Form.Group controlId='rating'>
-                                                                <Form.Label>Rating</Form.Label>
+                                                                <Form.Label>Nota</Form.Label>
                                                                 <Form.Control
                                                                     as='select'
                                                                     value={rating}
                                                                     onChange={(e) => setRating(e.target.value)}
                                                                 >
-                                                                    <option value=''>Select...</option>
-                                                                    <option value='1'>1 - Poor</option>
-                                                                    <option value='2'>2 - Fair</option>
-                                                                    <option value='3'>3 - Good</option>
-                                                                    <option value='4'>4 - Very Good</option>
-                                                                    <option value='5'>5 - Excellent</option>
+                                                                    <option value=''>Selecione...</option>
+                                                                    <option value='1'>1 - Pessimo</option>
+                                                                    <option value='2'>2 - Ruim</option>
+                                                                    <option value='3'>3 - Bom</option>
+                                                                    <option value='4'>4 - Muito Bom</option>
+                                                                    <option value='5'>5 - Excelente</option>
                                                                 </Form.Control>
                                                             </Form.Group>
                                                             <Form.Group controlId='comment'>
-                                                                <Form.Label>Feedback</Form.Label>
+                                                                <Form.Label>Comentario</Form.Label>
                                                                 <Form.Control
                                                                     as='textarea'
                                                                     row='3'
@@ -153,11 +143,11 @@ const FarmerProduct = ({ history, match }) => {
                                                                 disabled={loadingReview}
                                                                 type='submit'
                                                                 variant='primary'
-                                                            >Submit</Button>
+                                                            >Enviar</Button>
                                                         </Form>
                                                     ) : (
                                                             <Message>
-                                                                Please <Link to='/login'>sign in</Link> to write a review{' '}
+                                                                Por favor <Link to='/login'>entre</Link> para escrever uma avaliação{' '}
                                                             </Message>
                                                         )}
                                                 </ListGroup.Item>

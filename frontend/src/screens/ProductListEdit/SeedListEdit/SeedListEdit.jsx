@@ -95,53 +95,53 @@ const SeedListEdit = ({ match }) => {
     return (
         <Container style={{ marginBottom: '50px' }}>
             <Meta
-                title="Agroic | Admin Seed Edit"
+                title="AgroBras | Admin Semente Editar"
             />
             <FormContainer>
-                <h2 style={{ marginTop: '120px', textAlign: 'center' }}>Seed Profile</h2>
+                <h2 style={{ marginTop: '120px', textAlign: 'center' }}>Semente Perfil</h2>
                 <Link to='/admin/productlist' className='btn btn-light my-3'>
-                    GO BACK
+                    VOLTAR
                 </Link>
                 {loading && <Loader />}
                 {error && <Message variant='danger'>{error}</Message>}
                 {loadingUpdate && <Loader />}
                 {errorUpdate && <Message variant='danger'>{errorUpdate}</Message>}
-                {successUpdate && <Message variant='success'>Profile Updated!</Message>}
+                {successUpdate && <Message variant='success'>Perfil Atualizado!</Message>}
                 <Form onSubmit={submitHandler}>
                     <Row>
                         <Col md={6}>
                             <Form.Group controlId='name'>
-                                <Form.Label>Name</Form.Label>
+                                <Form.Label>Nome</Form.Label>
                                 <Form.Control
                                     type="name"
-                                    placeholder="Enter name"
+                                    placeholder="Insira o nome"
                                     value={name}
                                     onChange={(e) => setName(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='image'>
-                                <Form.Label>Image</Form.Label>
+                                <Form.Label>Imagem</Form.Label>
                                 <Form.Control
                                     type="text"
-                                    placeholder="Enter image url"
+                                    placeholder="Insira uma imagem"
                                     value={image}
                                     onChange={(e) => setImage(e.target.value)}
                                 ></Form.Control>
                                 <Form.File
                                     id='image-file'
-                                    label='Choose File'
+                                    label='Escolher Arquivo'
                                     custom
                                     onChange={uploadFileHandler}
                                 ></Form.File>
                                 {uploading && <Loader />}
                             </Form.Group>
                             <Form.Group controlId='description'>
-                                <Form.Label>Description</Form.Label>
+                                <Form.Label>Descrição</Form.Label>
                                 <Form.Control
                                     as="textarea"
                                     rows={3}
                                     type="description"
-                                    placeholder="Enter description"
+                                    placeholder="Insira uma descrição"
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                                 ></Form.Control>
@@ -149,33 +149,33 @@ const SeedListEdit = ({ match }) => {
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId='category'>
-                                <Form.Label>Category</Form.Label>
+                                <Form.Label>Categoria</Form.Label>
                                 <Form.Control
                                     type="category"
-                                    placeholder="Enter price"
+                                    placeholder="Insira a categoria"
                                     value={category}
                                     onChange={(e) => setCategory(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='price'>
-                                <Form.Label>Price</Form.Label>
+                                <Form.Label>Preço</Form.Label>
                                 <Form.Control
                                     type="price"
-                                    placeholder="Enter price"
+                                    placeholder="Insira o preço"
                                     value={price}
                                     onChange={(e) => setPrice(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='countInStock'>
-                                <Form.Label>Count in stock</Form.Label>
+                                <Form.Label>Quantidade em estoque</Form.Label>
                                 <Form.Control
                                     type="countInStock"
-                                    placeholder="Enter count in stock"
+                                    placeholder="Insira a quantidade em estoque"
                                     value={countInStock}
                                     onChange={(e) => setCountInStock(e.target.value)}
                                 ></Form.Control>
                             </Form.Group>
-                            <Button type="submit" variant="primary">Update</Button>
+                            <Button type="submit" variant="primary">Atualizar</Button>
                         </Col>
                     </Row>
                 </Form>

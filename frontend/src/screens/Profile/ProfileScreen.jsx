@@ -1,15 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import {
-    Form,
-    Button,
-    Row,
-    Col,
-    Container,
-    Table,
-    Image,
-    Overlay,
-    Popover
-} from 'react-bootstrap'
+import { Form, Button, Row, Col, Container, Table, Image, Overlay, Popover } from 'react-bootstrap'
 import { Scrollbar } from "react-scrollbars-custom";
 import { LinkContainer } from 'react-router-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
@@ -70,7 +60,7 @@ const ProfileScreen = ({ history }) => {
     const submitHandler = (e) => {
         e.preventDefault()
         if (password !== confirmPassword) {
-            setMessage('Passwords do not match')
+            setMessage('Senham não combinam')
         } else {
             dispatch(updateUserProfile({ id: user._id, name, email, password, cropSelection }))
         }
@@ -86,71 +76,71 @@ const ProfileScreen = ({ history }) => {
     return (
         <Container fluid style={{ marginBottom: '50px' }}>
             <Meta
-                title="Agroic | Profile"
+                title="AgroBras | Perfil"
             />
             <Row>
                 <Col md={3}>
-                    <h2 style={{ marginTop: '110px' }}>User Profile</h2>
+                    <h2 style={{ marginTop: '110px' }}>Perfil</h2>
                     {message && <Message variant='danger'>{message}</Message>}
                     {error && <Message variant='danger'>{error}</Message>}
-                    {success && <Message variant='success'>Profile Updated!</Message>}
+                    {success && <Message variant='success'>Perfil Atualizado!</Message>}
                     {loading && <Loader />}
                     <Form onSubmit={submitHandler}>
                         <Form.Group controlId='name'>
-                            <Form.Label>Name <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="name"
-                                placeholder="Enter name"
+                                placeholder="Insira um nome"
                                 value={name}
                                 required
                                 onChange={(e) => setName(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='email'>
-                            <Form.Label>Email Address / NIC <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>E-mail <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="nic"
-                                placeholder="Enter email or NIC"
+                                placeholder="Insira um e-mail"
                                 value={email}
                                 required
                                 onChange={(e) => setEmail(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='cropSelection'>
-                            <Form.Label>Crop Selection (optional)</Form.Label>
+                            <Form.Label>Categoria</Form.Label>
                             <Form.Control
                                 type="cropSelection"
-                                placeholder="Enter cropSelection"
+                                placeholder="Ex: fruta, semente"
                                 value={cropSelection}
                                 onChange={(e) => setCropSelection(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='password'>
-                            <Form.Label>Password</Form.Label>
+                            <Form.Label>Senha</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Enter password"
+                                placeholder="Insira uma senha"
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='confirmPassword'>
-                            <Form.Label>Confirm password</Form.Label>
+                            <Form.Label>Confirme a senha</Form.Label>
                             <Form.Control
                                 type="password"
-                                placeholder="Confirm password"
+                                placeholder="Confirme a senha"
                                 value={confirmPassword}
                                 onChange={(e) => setConfirmPassword(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
-                        <Button type="submit" variant="primary">Update</Button>
+                        <Button type="submit" variant="primary">Atualizar</Button>
                     </Form>
                 </Col>
                 <Col md={9}>
                     <Scrollbar style={{ width: '100%', height: 630 }}>
                         <Container fluid>
                             <Row>
-                                <h2 style={{ marginTop: '110px' }}>My Orders</h2>
+                                <h2 style={{ marginTop: '110px' }}>Meus Pedidos</h2>
                                 {loadingOrders ? <Loader />
                                     : errorOrders ? <Message variant="danger">{errorOrders}</Message>
                                         : (
@@ -158,11 +148,11 @@ const ProfileScreen = ({ history }) => {
                                                 <thead>
                                                     <tr>
                                                         <th>ID</th>
-                                                        <th>DATE</th>
+                                                        <th>DATA</th>
                                                         <th>TOTAL</th>
-                                                        <th>PAID</th>
-                                                        <th>DELIVERED</th>
-                                                        <th>MORE</th>
+                                                        <th>PAGO</th>
+                                                        <th>ENVIADO</th>
+                                                        <th>MAIS</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -179,7 +169,7 @@ const ProfileScreen = ({ history }) => {
                                                             }</td>
                                                             <td>
                                                                 <LinkContainer to={`/order/${order._id}`}>
-                                                                    <Button className="btn-sm" variant="success">Details</Button>
+                                                                    <Button className="btn-sm" variant="success">Detalhes</Button>
                                                                 </LinkContainer>
                                                             </td>
                                                         </tr>
@@ -190,20 +180,20 @@ const ProfileScreen = ({ history }) => {
                                 }
                             </Row>
                             <Row>
-                                <h2 style={{ marginTop: '110px' }}>My Products</h2>
+                                <h2 style={{ marginTop: '110px' }}>Meus Produtos</h2>
                                 {loadingProducts ? <Loader />
                                     : errorProducts ? <Message variant="danger">{errorProducts}</Message>
                                         : (
                                             <Table striped bordered hover responsive className="table-sm">
                                                 <thead>
                                                     <tr>
-                                                        <th>NAME</th>
-                                                        <th>EMAIL/NIC</th>
-                                                        <th>ADDRESS</th>
-                                                        <th>IMAGE</th>
-                                                        <th>CROP</th>
-                                                        <th>REVIEWED</th>
-                                                        <th>EDIT</th>
+                                                        <th>NOME</th>
+                                                        <th>E-MAIL</th>
+                                                        <th>ENDEREÇO</th>
+                                                        <th>IMAGEM</th>
+                                                        <th>CATEGORIA</th>
+                                                        <th>REVISADO</th>
+                                                        <th>EDITAR</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
@@ -235,11 +225,11 @@ const ProfileScreen = ({ history }) => {
                                                                     containerPadding={10}
                                                                 >
                                                                     <Popover id="popover-contained">
-                                                                        <Popover.Title as="h3">Rating: {product.rating}</Popover.Title>
+                                                                        <Popover.Title as="h3">Avaliação: {product.rating}</Popover.Title>
                                                                         {
                                                                             product.reviews.map(review => (
                                                                                 <Popover.Content key={review._id}>
-                                                                                    <strong>Feedback: {review.comment}</strong>
+                                                                                    <strong>Comentario: {review.comment}</strong>
                                                                                 </Popover.Content>
                                                                             ))
                                                                         }

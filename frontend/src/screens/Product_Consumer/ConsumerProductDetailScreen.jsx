@@ -37,10 +37,10 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
     return (
         <div className="productScreen">
             <Meta
-                title="Agroic | Consumer Product"
+                title="AgroBras | Consumidor Produto"
             />
             <Container>
-                <Link className="btn btn-go-back btn-dark" to="/consumer">GO BACK</Link>
+                <Link className="btn btn-go-back btn-dark" to="/consumer">VOLTAR</Link>
                 {
                     loading ?
                         <Loader />
@@ -61,13 +61,13 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                                 <h2>{consumerProduct.prod_name}</h2>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Seller: {consumerProduct.seller_name}</h4>
+                                                <h4>Vendedor: {consumerProduct.seller_name}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Price: {consumerProduct.price}</h4>
+                                                <h4>Preço: {consumerProduct.price}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <p>Avalaible Location: {consumerProduct.avalaible_location}</p>
+                                                <p>Localização: {consumerProduct.avalaible_location}</p>
                                             </ListGroup.Item>
                                         </ListGroup>
                                     </Col>
@@ -76,15 +76,15 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                             <ListGroup variant='flush'>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Price:</Col>
-                                                        <Col><strong>RS. {consumerProduct.price}</strong></Col>
+                                                        <Col>Preço:</Col>
+                                                        <Col><strong>RS {consumerProduct.price}</strong></Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
                                                         <Col>Status:</Col>
                                                         <Col>
-                                                            {consumerProduct.quantity > 0 ? 'In Stock' : 'Out Of Stock'}
+                                                            {consumerProduct.quantity > 0 ? 'Em estoque' : 'Sem estoque'}
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
@@ -92,7 +92,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                                     consumerProduct.quantity > 0 && (
                                                         <ListGroup.Item>
                                                             <Row>
-                                                                <Col>Qty</Col>
+                                                                <Col>Quantidade</Col>
                                                                 <Col>
                                                                     <Form.Control as='select' value={qty} onChange={(e => setQty(e.target.value))}>
                                                                         {
@@ -110,7 +110,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                                     )
                                                 }
                                                 <ListGroup.Item>
-                                                    <Button type="button" className="btn btn-block" onClick={addtoCartHandler}>Add To Cart</Button>
+                                                    <Button type="button" className="btn btn-block" onClick={addtoCartHandler}>Adicionar ao carrinho</Button>
                                                 </ListGroup.Item>
                                             </ListGroup>
                                         </Card>

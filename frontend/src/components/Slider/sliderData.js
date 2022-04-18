@@ -1,21 +1,21 @@
 const slider = [
     {
-        title: "We cultivate new crops to make farmers increase profits!",
-        description: "'' Agricultural growth is a proven driver of poverty reduction. When agriculture stimulates growth ... the growth is twice as effective in reducing poverty as growth based in other sectors ''",
+        title: "Auxiliando agricultores a aumentarem seus lucros!",
+        description: "'' O crescimento agrícola é um impulsionador comprovado da redução da pobreza. Quando a agricultura estimula o crescimento... o crescimento é duas vezes mais eficaz na redução da pobreza do que o crescimento baseado em outros setores. ''",
         tag: "GIZA MDOE",
-        image: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=682&q=80",
+        image: "https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     },
     {
-        title: "Solutions for a healthier, sustainable future",
-        description: "'' Agriculture is the greatest and fundamentally the most important of our industries. The cities are but the branches of the tree of national life, the roots of which go deeply into the land. We all flourish or decline with the farmer. ''",
+        title: "Fornecemos as melhores maquinas pesadas de plantio e colheita",
+        description: "'' A agricultura é a maior e fundamentalmente a mais importante de nossas indústrias. As cidades são apenas os ramos da árvore da vida nacional, cujas raízes penetram profundamente na terra. Todos nós florescemos ou declinamos com o agricultor. ''",
         tag: "BERNARD BARUCH",
-        image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1499&q=80",
+        image: "https://images.pexels.com/photos/2933243/pexels-photo-2933243.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     },
     {
-        title: "Helping farmers.Fighting climate change.",
-        description: "'' I know of no pursuit in which more real and important services can be rendered to any country than by improving its agriculture, its breed of useful animals, and other branches of a husbandman's cares. ''",
+        title: "Inpulsionando o mercado agropecuario",
+        description: "'' Não conheço nenhuma atividade em que serviços mais reais e importantes possam ser prestados a qualquer país do que melhorando sua agricultura. ''",
         tag: "GEORGE WASHINGTON",
-        image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+        image: "https://images.pexels.com/photos/767240/pexels-photo-767240.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260",
     },
 ];
 
