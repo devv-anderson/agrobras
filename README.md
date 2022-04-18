@@ -1,5 +1,6 @@
 <h1 align="center">AgroBras - Digitalizando o mundo agricola <br /></h1>  
 
+![agrobrasIcon](https://user-images.githubusercontent.com/63078411/163828683-f1f70351-de27-4c67-bc67-457e98b3ad49.jpg)
 
 ## Aplicação web construida com Reactjs + Expressjs + Nodejs + MongoDB (MERN)💻
 
