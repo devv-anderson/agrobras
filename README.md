@@ -3,7 +3,7 @@
 
 ## Aplicação web construida com Reactjs + Expressjs + Nodejs + MongoDB (MERN)💻
 
-## Features
+## Recursos
 
 - Perfil de vendedor
 - Add/deletar produtos
