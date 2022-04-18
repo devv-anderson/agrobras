@@ -35,7 +35,7 @@ MONGO_URI = sua mongodb uri
 JWT_SECRET = 'abc123'
 PAYPAL_CLIENT_ID = sua chave paypal
 ```
-Create a .env file inside frontend and add the following
+
 Crie um arquivo .env dentro da pasta frontend e adicione a seguinte variavel
 
 ```
