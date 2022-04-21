@@ -37,7 +37,7 @@ const Header = () => {
                         <Nav.Link className="nav-cal">CONSUMIDOR</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="login?redirect=supplier">
-                        <Nav.Link className="nav-cal">VENDEDOR</Nav.Link>
+                        <Nav.Link className="nav-cal">ANUNCIAR</Nav.Link>
                     </LinkContainer>
                     <LinkContainer to="/cart" >
                         <Nav.Link className={`${userInfo ? "remove-space" : "add-space cart nav-cal"} `}>

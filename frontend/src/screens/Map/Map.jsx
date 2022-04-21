@@ -70,7 +70,7 @@ const Map = () => {
                                 {
                                     selectedPlace.isReviwed
                                         ? (<>
-                                            <p><Rating text="Rating" value={selectedPlace.rating} /></p>
+                                            <p><Rating text="Avaliação" value={selectedPlace.rating} /></p>
                                         </>
                                         )
                                         : ''

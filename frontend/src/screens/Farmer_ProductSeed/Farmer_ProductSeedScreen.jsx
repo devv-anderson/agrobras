@@ -35,7 +35,7 @@ const Farmer_ProductSeedScreen = () => {
 
         <div className="ProductSeedScreen">
             <Meta
-                title="AgroBras | Agricultores sementes"
+                title="AgroBras | Agricultor sementes"
             />
             <Container>
                 <h1 className="p-3" style={{ textAlign: 'center' }}>Sementes Recentes</h1>
@@ -62,10 +62,10 @@ const Farmer_ProductSeedScreen = () => {
                                 }
                                 {
                                     numberOfItems >= productSeeds.length
-                                        ? <Alert style={{ backgroundColor: 'red' }} className="col-md-12 text-center">Finished</Alert>
+                                        ? <Alert style={{ backgroundColor: 'red' }} className="col-md-12 text-center">Finalizado</Alert>
                                         : ''
                                 }
-                                <Button className="col-md-12 text-center" variant="success outline-dark" onClick={showMore}>Show more</Button>
+                                <Button className="col-md-12 text-center" variant="success outline-dark" onClick={showMore}>Ver mais</Button>
                             </Row>)
                 }
             </Container>

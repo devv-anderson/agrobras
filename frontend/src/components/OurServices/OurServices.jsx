@@ -20,7 +20,7 @@ const OurServices = () => {
                         <p className="sub-desc">Possuimos todos os produtos para jardinagem, sementes, pesticidads e fertilizantes.</p>
                     </Col>
                     <Col md={3}>
-                        <h5 className="sub-title">Vendedor</h5>
+                        <h5 className="sub-title">Anuncio</h5>
                         <Image className="img" src="images/services/supplier.svg" fluid />
                         <p className="sub-desc">Agora você produz e pode anunciar seus produtos, milhares de clientes conectados em todo o Brasil.</p>
                     </Col>

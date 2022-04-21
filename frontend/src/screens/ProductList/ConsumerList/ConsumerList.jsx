@@ -82,7 +82,7 @@ const ConsumerList = () => {
                             <thead>
                                 <tr>
                                     <td>ID</td>
-                                    <td>NAME DO VENDEDOR</td>
+                                    <td>NOME DO VENDEDOR</td>
                                     <td>NOME DO PRODUTO</td>
                                     <td>LOCALIZAÇÃO</td>
                                     <td>EDITAR / DELETAR</td>

@@ -18,22 +18,22 @@ const CardMenu = () => {
                 </Card>
                 <Card border='primary'>
                     <Card.Body>
-                        <Card.Title className='title'>Vendedor</Card.Title>
+                        <Card.Title className='title'>Consumidor</Card.Title>
                         <Card.Text className='card-text'>
-                            Agora ficou mais simples e facil ofertar sua variedade de produtos, faça isso atraves de nossa plataforma.         
+                           Não há necessidade de ir até o campo para obter grãos, basta encomendar aqui e receba na comodidade do seu lar.
                         </Card.Text>
-                        <Link to='login?redirect=supplier'>
+                        <Link to='/consumer'>
                             <Button variant="success" className="btn-explore btn-md m-2">VER MAIS</Button>
                         </Link>
                     </Card.Body>
                 </Card>
                 <Card border='primary'>
                     <Card.Body>
-                        <Card.Title className='title'>Consumidor</Card.Title>
+                        <Card.Title className='title'>Anunciar</Card.Title>
                         <Card.Text className='card-text'>
-                           Não há necessidade de ir até o campo para obter grãos, basta encomendar aqui e receba na comodidade do seu lar.
+                            Agora ficou mais simples e facil ofertar sua variedade de produtos, faça isso atraves de nossa plataforma.         
                         </Card.Text>
-                        <Link to='/consumer'>
+                        <Link to='login?redirect=supplier'>
                             <Button variant="success" className="btn-explore btn-md m-2">VER MAIS</Button>
                         </Link>
                     </Card.Body>

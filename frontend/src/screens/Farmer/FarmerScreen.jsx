@@ -8,7 +8,7 @@ const FarmerScreen = () => {
     return (
         <div>
             <Meta
-                title="AgroBras | Agricultores"
+                title="AgroBras | Agricultor"
             />
             <Container className='farmerContainer'>
                 <h1 className='title'>AGRICULTOR</h1>
