@@ -12,7 +12,7 @@ const SupplierScreen = () => {
             />
             <h1 className='title'>VENDEDOR</h1>
             <h4 className="supplier-title">
-                Venda seus produtos atraves da melhor plataforma da atualidade, temos agricultores conectados de todas as partes do Brasil.
+                Anuncie seus produtos atraves da melhor plataforma da atualidade, temos agricultores conectados de todas as partes do Brasil.
             </h4>
             <br />
             <AddSupplierProduct />

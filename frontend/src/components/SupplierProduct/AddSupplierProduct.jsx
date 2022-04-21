@@ -90,10 +90,10 @@ const AddSupplierProduct = () => {
                 <Row>
                     <Col md={5}>
                         <Form.Group controlId='name'>
-                            <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Categoria <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="name"
-                                placeholder="Insira o nome"
+                                placeholder="Ex: fruta, grão, hortaliça"
                                 value={name}
                                 required
                                 onChange={(e) => setName(e.target.value)}
@@ -121,10 +121,10 @@ const AddSupplierProduct = () => {
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='cropSelection'>
-                            <Form.Label>Categoria <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="cropSelection"
-                                placeholder="Ex: fruta, semente"
+                                placeholder="Insira o nome"
                                 value={cropSelection}
                                 required
                                 onChange={(e) => setCropSelection(e.target.value)}

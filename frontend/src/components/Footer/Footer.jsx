@@ -43,7 +43,7 @@ const Footer = () => {
                             </h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
                             <p>
-                            Nosso objetivo do AgroBras é fornecer conexões entre diferentes funções na indústria agrícola. aqui os agricultores podem comprar suas necessidades agrícolas de vendedores e também podem vender seus produtos aos consumidores.
+                            Nosso objetivo do AgroBras é fornecer conexões entre diferentes funções na indústria agrícola. aqui os agricultores podem comprar suas necessidades agrícolas, e também podem anunciar gratis seus produtos aos consumidores.
                             </p>
                         </MDBCol>
                         <MDBCol md="2" lg="2" xl="2" className="mb-4 dark-grey-text">

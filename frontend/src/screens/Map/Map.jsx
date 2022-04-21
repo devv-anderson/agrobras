@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Image } from 'react-bootstrap'
-import {
-    GoogleMap,
-    withScriptjs,
-    withGoogleMap,
-    Marker,
-    InfoWindow
-} from 'react-google-maps'
+import { GoogleMap, withScriptjs, withGoogleMap, Marker, InfoWindow } from 'react-google-maps'
 import Message from './../../components/Message/Message'
 import Loader from './../../components/Loader/Loader'
 import { listSupplierProductsForAll } from './../../actions/supplierProduct'
@@ -70,9 +64,9 @@ const Map = () => {
                     >
                         <div>
                             <Image className="mx-auto d-block img-fluid mb-1" rounded width="120px" src={selectedPlace.image} alt={selectedPlace.name} />
-                            <h4 style={{ textAlign: "center" }}>{selectedPlace.cropSelection}</h4>
+                            <h4 style={{ textAlign: "center" }}>{selectedPlace.name}</h4>
                             <p>
-                                Description: {selectedPlace.description}<br />
+                                Descrição: {selectedPlace.description}<br />
                                 {
                                     selectedPlace.isReviwed
                                         ? (<>
@@ -81,6 +75,8 @@ const Map = () => {
                                         )
                                         : ''
                                 }
+                                Telefone: {selectedPlace.phonenumber}<br />
+                                Endereço: {selectedPlace.address}
                             </p>
                         </div>
                     </InfoWindow>
