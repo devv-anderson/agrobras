@@ -2,18 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
 import Rating from '../../components/Rating/Rating';
-import {
-    Col,
-    Container,
-    Row,
-    Image,
-    ListGroup,
-    Card,
-    Button,
-    Form
-} from 'react-bootstrap';
+import { Col, Container, Row, Image, ListGroup, Card, Button, Form } from 'react-bootstrap';
 import './SeedProduct.css'
-
 import { listSeedProductsDetails, createProductReview } from './../../actions/productSeedActions'
 import Loader from '../../components/Loader/Loader';
 import Message from '../../components/Message/Message';
@@ -92,7 +82,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                 <Rating value={productSeed.rating} text={`${productSeed.numReviews} reviews`} />
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Price: {productSeed.price}</h4>
+                                                <h4>Preço: R${productSeed.price}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
                                                 <p><span style={{fontWeight:"bold"}}>Descrição:</span><br /> {productSeed.description}</p>
@@ -105,7 +95,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                 <ListGroup.Item>
                                                     <Row>
                                                         <Col>Preço:</Col>
-                                                        <Col><strong>RS. {productSeed.price}</strong></Col>
+                                                        <Col><strong>R${productSeed.price}</strong></Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
@@ -138,7 +128,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                     )
                                                 }
                                                 <ListGroup.Item>
-                                                    <Button type="button" className="btn btn-block" onClick={addToCartHandler}>Add To Cart</Button>
+                                                    <Button type="button" className="btn btn-block" onClick={addToCartHandler}>Adicionar ao carrinho</Button>
                                                 </ListGroup.Item>
                                             </ListGroup>
                                         </Card>
@@ -164,10 +154,10 @@ const SeedProductScreen = ({ history, match }) => {
                     <Col md={6}>
                         <ListGroup>
                             <ListGroup.Item>
-                                <h2>Write a Customer Review</h2>
+                                <h2>Avalie o produto</h2>
                                 {successProductReview && (
                                     <Message variant='success'>
-                                        Review submitted successfully
+                                        Avaliação enviada com sucesso
                                     </Message>
                                 )}
                                 {loadingProductReview && <Loader />}
@@ -177,13 +167,13 @@ const SeedProductScreen = ({ history, match }) => {
                                 {userInfo ? (
                                     <Form onSubmit={submitHandler}>
                                         <Form.Group controlId='rating'>
-                                            <Form.Label>Rating</Form.Label>
+                                            <Form.Label>Avaliação</Form.Label>
                                             <Form.Control
                                                 as='select'
                                                 value={rating}
                                                 onChange={(e) => setRating(e.target.value)}
                                             >
-                                                <option value=''>Select...</option>
+                                                <option value=''>Selecione...</option>
                                                 <option value='1'>1 - Poor</option>
                                                 <option value='2'>2 - Fair</option>
                                                 <option value='3'>3 - Good</option>

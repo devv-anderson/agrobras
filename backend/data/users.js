@@ -9,14 +9,14 @@ const users = [
         isAdmin: true
     },
     {
-        name: 'Sanjula User',
-        email: 'Sanjula@example.com',
-        cropSelection: 'paddy',
+        name: 'Guts',
+        email: 'guts@email.com',
+        cropSelection: '',
         password: bcrypt.hashSync('123456', 10),
     },
     {
-        name: 'Test User',
-        email: 'Test@example.com',
+        name: 'Griffth',
+        email: 'griffth@example.com',
         cropSelection: 'fruits',
         password: bcrypt.hashSync('123456', 10),
     },

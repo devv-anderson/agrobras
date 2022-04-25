@@ -90,10 +90,10 @@ const AddSupplierProduct = () => {
                 <Row>
                     <Col md={5}>
                         <Form.Group controlId='name'>
-                            <Form.Label>Categoria <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Nome do produto <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="name"
-                                placeholder="Ex: fruta, grão, hortaliça"
+                                placeholder="Insira o nome do produto"
                                 value={name}
                                 required
                                 onChange={(e) => setName(e.target.value)}
@@ -121,20 +121,20 @@ const AddSupplierProduct = () => {
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='cropSelection'>
-                            <Form.Label>Nome <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Categoria <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="cropSelection"
-                                placeholder="Insira o nome"
+                                placeholder="Ex: fruta, grão, hortaliça"
                                 value={cropSelection}
                                 required
                                 onChange={(e) => setCropSelection(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
                         <Form.Group controlId='storage'>
-                            <Form.Label>Peso <span style={{ color: 'red' }}>*</span></Form.Label>
+                            <Form.Label>Preço <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="storage"
-                                placeholder="Insira o peso (kg)"
+                                placeholder="Insira o preço"
                                 value={storage}
                                 required
                                 onChange={(e) => setStorage(e.target.value)}
@@ -146,7 +146,7 @@ const AddSupplierProduct = () => {
                             <Form.Label>Imagem <span style={{ color: 'red' }}>*</span></Form.Label>
                             <Form.Control
                                 type="text"
-                                placeholder="Insira uma imagem"
+                                placeholder="Insira uma foto"
                                 value={image}
                                 required
                                 onChange={(e) => setImage(e.target.value)}

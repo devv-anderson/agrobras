@@ -66,6 +66,7 @@ const Map = () => {
                             <Image className="mx-auto d-block img-fluid mb-1" rounded width="120px" src={selectedPlace.image} alt={selectedPlace.name} />
                             <h4 style={{ textAlign: "center" }}>{selectedPlace.name}</h4>
                             <p>
+                                Preço: R${selectedPlace.storage} <br />
                                 Descrição: {selectedPlace.description}<br />
                                 {
                                     selectedPlace.isReviwed

@@ -1,18 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom';
-import {
-    Col,
-    Container,
-    Row,
-    Image,
-    ListGroup,
-    Card,
-    Button,
-    Form
-} from 'react-bootstrap';
+import { Col, Container, Row, Image, ListGroup, Card, Button, Form } from 'react-bootstrap';
 import './consumerStyles.css';
-
 import Loader from '../../components/Loader/Loader';
 import Message from '../../components/Message/Message';
 import { listConsumerProductsDetails } from '../../actions/consumerProductAction.js'
@@ -60,15 +50,15 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                             <ListGroup.Item>
                                                 <h2>{consumerProduct.prod_name}</h2>
                                             </ListGroup.Item>
-                                            <ListGroup.Item>
+                                        {/*     <ListGroup.Item>
                                                 <h4>Vendedor: {consumerProduct.seller_name}</h4>
-                                            </ListGroup.Item>
+                                            </ListGroup.Item> */}
                                             <ListGroup.Item>
                                                 <h4>Preço: {consumerProduct.price}</h4>
                                             </ListGroup.Item>
-                                            <ListGroup.Item>
+                                            {/* <ListGroup.Item>
                                                 <p>Localização: {consumerProduct.avalaible_location}</p>
-                                            </ListGroup.Item>
+                                            </ListGroup.Item> */}
                                         </ListGroup>
                                     </Col>
                                     <Col md={3}>

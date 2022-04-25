@@ -10,7 +10,7 @@ const SupplierScreen = () => {
             <Meta
                 title="AgroBras | Vendedor"
             />
-            <h1 className='title'>VENDEDOR</h1>
+            <h1 className='title'>ANUNCIO</h1>
             <h4 className="supplier-title">
                 Anuncie seus produtos atraves da melhor plataforma da atualidade, temos agricultores conectados de todas as partes do Brasil.
             </h4>

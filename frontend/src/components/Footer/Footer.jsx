@@ -43,7 +43,7 @@ const Footer = () => {
                             </h6>
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
                             <p>
-                            Nosso objetivo do AgroBras é fornecer conexões entre diferentes funções na indústria agrícola. aqui os agricultores podem comprar suas necessidades agrícolas, e também podem anunciar gratis seus produtos aos consumidores.
+                            O objetivo do AgroBras é fornecer conexões entre diferentes funções na indústria agrícola. aqui os agricultores podem comprar suas necessidades agrícolas, e também podem anunciar gratis seus produtos aos consumidores.
                             </p>
                         </MDBCol>
                         <MDBCol md="2" lg="2" xl="2" className="mb-4 dark-grey-text">
@@ -63,7 +63,7 @@ const Footer = () => {
                             <hr className="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style={{ width: "60px" }} />
                             <p><i className="fa fa-home mr-3" /> São Paulo, Brasil</p>
                             <p><i className="fa fa-envelope mr-3" /> agrobras@email.com</p>
-                            <p><i className="fa fa-phone mr-3" /> + 55 11 23456788</p>
+                            <p><i className="fa fa-phone mr-3" /> + 55 11 23456789</p>
                             <p><i className="fa fa-print mr-3" /> + 55 11 23456789</p>
                         </MDBCol>
                         <MDBCol md="3" lg="4" xl="3" className="mb-4 dark-grey-text">

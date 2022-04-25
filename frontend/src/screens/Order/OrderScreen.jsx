@@ -136,7 +136,7 @@ const OrderScreen = ({ match }) => {
                                                                                 {item.name}
                                                                             </Col>
                                                                             <Col md={4}>
-                                                                                {`${item.qty} x RS. ${item.price} = RS. ${item.qty * item.price}`}
+                                                                                {`${item.qty} x R$ ${item.price} = R$ ${item.qty * item.price}`}
                                                                             </Col>
                                                                         </Row>
                                                                     </ListGroup.Item>

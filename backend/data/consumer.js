@@ -1,57 +1,57 @@
 const consumer = [
     {
-        prod_name: "Mini Mogra Rice",
-        seller_name: "Sanjula",
+        prod_name: "Arroz Orgânico",
+        seller_name: "Guts",
         image: '/images/consumer/mogra_rice.jpg',
-        price: 450,
+        price: 25,
         prod_size: "10kg",
         quantity: 10,
-        avalaible_location: "Mathale"
+        avalaible_location: "Berserk"
     },
     {
-        prod_name: "Red Grapes",
-        seller_name: "Test",
+        prod_name: "Uvas Vermelhas",
+        seller_name: "Griffth",
         image: '/images/consumer/red_grapes.jpg',
-        price: 200,
+        price: 32,
         prod_size: "5kg",
         quantity: 10,
-        avalaible_location: "Kandy"
+        avalaible_location: "Berserk"
     },
     {
-        prod_name: "Sharp Chana Dal",
-        seller_name: "Silva",
+        prod_name: "Milho de pipoca",
+        seller_name: "Serpico",
         image: '/images/consumer/chana_dhal.jpg',
-        price: 70,
+        price: 15,
         prod_size: "500g",
         quantity: 10,
-        avalaible_location: "Panadura"
+        avalaible_location: "Berserk"
     },
     {
-        prod_name: "Gold Atta",
-        seller_name: "Silva",
+        prod_name: "Batata Gold Atta",
+        seller_name: "Casca",
         image: '/images/consumer/gold_atta.jpg',
-        price: 560,
-        prod_size: "10kg",
+        price: 9.99,
+        prod_size: "500g",
         quantity: 10,
-        avalaible_location: "Dehiwala"
+        avalaible_location: "Berserk"
     },
     {
-        prod_name: "Wheat Sona",
-        seller_name: "Alwis",
+        prod_name: "Farinha Sona",
+        seller_name: "Isidro",
         image:'/images/consumer/sona.jpg',
         price: 50,
-        prod_size: "140kg",
+        prod_size: "1kg",
         quantity: 10,
-        avalaible_location: "Jaffna"
+        avalaible_location: "Berserk"
     },
     {
-        prod_name: "Basdmit rice",
-        seller_name: "Perera",
+        prod_name: "Arroz Sana",
+        seller_name: "Schierke",
         image:'/images/consumer/basmati_rice.jpg',
-        price: 500,
+        price: 4.99,
         prod_size: "2kg",
         quantity: 10,
-        avalaible_location: "Moratuwa"
+        avalaible_location: "Berserk"
     },
 ]
 

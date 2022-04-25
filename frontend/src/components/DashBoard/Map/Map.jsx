@@ -81,10 +81,10 @@ const Map = () => {
                             <Image className="mx-auto d-block img-fluid mb-1" rounded width="120px" src={selectedPlace.image} alt={selectedPlace.name} />
                             <h4 style={{ textAlign: "center" }}>{selectedPlace.cropSelection}</h4>
                             <p>
-                                Farmer: <span style={{ fontWeight: "bold" }}>{selectedPlace.name}</span><br />
-                                Description: {selectedPlace.description}<br />
-                                Address: {selectedPlace.address}<br />
-                                Reviewed: {
+                                Agricultor: <span style={{ fontWeight: "bold" }}>{selectedPlace.name}</span><br />
+                                Descrição: {selectedPlace.description}<br />
+                                Endereço: {selectedPlace.address}<br />
+                                Avaliação: {
                                     selectedPlace.isReviwed
                                         ? (<>
                                             <i className="fas fa-check" style={{ color: "green" }}></i>

@@ -152,10 +152,10 @@ const SupplierProductEdit = ({ match }) => {
                                 ></Form.Control>
                             </Form.Group>
                             <Form.Group controlId='storage'>
-                                <Form.Label>Peso <span style={{ color: 'red' }}>*</span></Form.Label>
+                                <Form.Label>Preço <span style={{ color: 'red' }}>*</span></Form.Label>
                                 <Form.Control
                                     type="storage"
-                                    placeholder="Insira o peso (kg)"
+                                    placeholder="Insira o preço"
                                     value={storage}
                                     required
                                     onChange={(e) => setStorage(e.target.value)}

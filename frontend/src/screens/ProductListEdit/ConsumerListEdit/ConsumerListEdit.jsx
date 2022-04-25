@@ -153,10 +153,10 @@ const ConsumerListEdit = ({ match }) => {
                         </Col>
                         <Col md={6}>
                             <Form.Group controlId='prodSize'>
-                                <Form.Label>Peso</Form.Label>
+                                <Form.Label>Preço</Form.Label>
                                 <Form.Control
                                     type="prodSize"
-                                    placeholder="Insira o peso"
+                                    placeholder="Insira o preço"
                                     value={prodSize}
                                     onChange={(e) => setProdSize(e.target.value)}
                                 ></Form.Control>
