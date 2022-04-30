@@ -102,7 +102,7 @@ const SeedProductScreen = ({ history, match }) => {
                                                     <Row>
                                                         <Col>Status:</Col>
                                                         <Col>
-                                                            {productSeed.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}
+                                                            {productSeed.countInStock > 0 ? 'Em estoque' : 'Sem estoque'}
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
@@ -138,8 +138,8 @@ const SeedProductScreen = ({ history, match }) => {
                 }
                 <Row>
                     <Col md={6}>
-                        <h2>Reviews</h2>
-                        {productSeed.reviews.length === 0 && <Message>No Reviews</Message>}
+                        <h2>Avaliações</h2>
+                        {productSeed.reviews.length === 0 && <Message>Sem avaliações</Message>}
                         <ListGroup variant='flush'>
                             {productSeed.reviews.map((review) => (
                                 <ListGroup.Item key={review._id}>
@@ -174,15 +174,15 @@ const SeedProductScreen = ({ history, match }) => {
                                                 onChange={(e) => setRating(e.target.value)}
                                             >
                                                 <option value=''>Selecione...</option>
-                                                <option value='1'>1 - Poor</option>
-                                                <option value='2'>2 - Fair</option>
-                                                <option value='3'>3 - Good</option>
-                                                <option value='4'>4 - Very Good</option>
-                                                <option value='5'>5 - Excellent</option>
+                                                <option value='1'>1 - Pessimo</option>
+                                                <option value='2'>2 - Ruim</option>
+                                                <option value='3'>3 - Bom</option>
+                                                <option value='4'>4 - Muito Bom</option>
+                                                <option value='5'>5 - Excelente</option>
                                             </Form.Control>
                                         </Form.Group>
                                         <Form.Group controlId='comment'>
-                                            <Form.Label>Comment</Form.Label>
+                                            <Form.Label>Comentario</Form.Label>
                                             <Form.Control
                                                 as='textarea'
                                                 row='3'
@@ -194,11 +194,11 @@ const SeedProductScreen = ({ history, match }) => {
                                             disabled={loadingProductReview}
                                             type='submit'
                                             variant='primary'
-                                        >Submit</Button>
+                                        >Enviar</Button>
                                     </Form>
                                 ) : (
                                         <p>
-                                            Please <Link to='/login'>sign in</Link> to write a review{' '}
+                                            Por favor <Link to='/login'>entre</Link> para escrever uma avaliação{' '}
                                         </p>
                                     )}
                             </ListGroup.Item>

@@ -106,15 +106,6 @@ const ProfileScreen = ({ history }) => {
                                 onChange={(e) => setEmail(e.target.value)}
                             ></Form.Control>
                         </Form.Group>
-                        <Form.Group controlId='cropSelection'>
-                            <Form.Label>Categoria</Form.Label>
-                            <Form.Control
-                                type="cropSelection"
-                                placeholder="Ex: fruta, semente"
-                                value={cropSelection}
-                                onChange={(e) => setCropSelection(e.target.value)}
-                            ></Form.Control>
-                        </Form.Group>
                         <Form.Group controlId='password'>
                             <Form.Label>Senha</Form.Label>
                             <Form.Control

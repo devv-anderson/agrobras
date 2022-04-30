@@ -112,7 +112,7 @@ const createFarmerProductReview = asyncHandler(async (req, res) => {
         const alreadyReviewed = product.reviews.find(r => r.user.toString() === req.user._id.toString())
         if (alreadyReviewed) {
             res.status(400)
-            throw new Error('Product already reviewed')
+            throw new Error('Produto já foi avaliado!')
         }
 
         const review = {

@@ -57,7 +57,7 @@ const LendMachineProduct = ({ history, match }) => {
                                                 <h2>{productLendMachines.name}</h2>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
-                                                <h4>Preço: {productLendMachines.price}</h4>
+                                                <h4>Preço: R${productLendMachines.price}</h4>
                                             </ListGroup.Item>
                                             <ListGroup.Item>
                                             <p><span style={{fontWeight:"bold"}}>Descrição:</span><br /> {productLendMachines.description}</p>
