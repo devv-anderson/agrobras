@@ -21,7 +21,7 @@ const getConsumerProductById = asyncHandler(async (req, res) => {
         res.json(consumerProduct);
     } else {
         res.status(404)
-        throw new Error('Consumer Product not Found')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -33,10 +33,10 @@ const deleteConsumerProduct = asyncHandler(async (req, res) => {
 
     if(consumerProduct) {
         consumerProduct.remove()
-        res.json({ message: 'Consumer product removed' });
+        res.json({ message: 'Produto removido' });
     } else {
         res.status(404)
-        throw new Error('Consumer Product not Found')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -48,7 +48,7 @@ const createConsumer = asyncHandler(async (req, res) => {
         prod_name: "Sample name",
         user: req.user._id,
         seller_name: "Sample seller",
-        image: '/images/consumer/mogra_rice.jpg',
+        image: '/images/consumer/arroz.JPG',
         price: 0,
         prod_size: "0kg",
         quantity: 0,
@@ -81,7 +81,7 @@ const updateConsumer = asyncHandler(async (req, res) => {
         res.status(201).json(updatedConsumer)
     } else {
         res.status(401)
-        throw new Error('Product not found')
+        throw new Error('Produto não encontrado')
     }
 })
 

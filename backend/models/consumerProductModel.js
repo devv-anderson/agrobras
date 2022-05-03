@@ -27,10 +27,6 @@ const consumerProductSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    seller_name: {
-        type: String,
-        required: true
-    },
     image: {
         type: String,
         required: true
@@ -39,6 +35,10 @@ const consumerProductSchema = mongoose.Schema({
         type: Number,
         required: true,
         default: 0
+    },
+    description: {
+        type: String,
+        required: true,
     },
     prod_size: {
         type: String,
@@ -49,10 +49,6 @@ const consumerProductSchema = mongoose.Schema({
         type: Number,
         required: true,
         default: 0
-    },
-    avalaible_location: {
-        type: String,
-        required: true
     }
 }, {
     timestamps: true

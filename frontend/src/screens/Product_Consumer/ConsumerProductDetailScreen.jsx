@@ -54,11 +54,11 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                                 <h4>Vendedor: {consumerProduct.seller_name}</h4>
                                             </ListGroup.Item> */}
                                             <ListGroup.Item>
-                                                <h4>Preço: {consumerProduct.price}</h4>
+                                                <h4>Preço: R${consumerProduct.price}</h4>
                                             </ListGroup.Item>
-                                            {/* <ListGroup.Item>
-                                                <p>Localização: {consumerProduct.avalaible_location}</p>
-                                            </ListGroup.Item> */}
+                                            <ListGroup.Item>
+                                                <h4>Descrição:</h4> {consumerProduct.description}
+                                            </ListGroup.Item>
                                         </ListGroup>
                                     </Col>
                                     <Col md={3}>
@@ -67,7 +67,7 @@ const ConsumerProductDetailScreen = ({ history, match }) => {
                                                 <ListGroup.Item>
                                                     <Row>
                                                         <Col>Preço:</Col>
-                                                        <Col><strong>RS {consumerProduct.price}</strong></Col>
+                                                        <Col><strong>R${consumerProduct.price}</strong></Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
