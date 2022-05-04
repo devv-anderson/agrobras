@@ -115,7 +115,7 @@ const OrderScreen = ({ match }) => {
                                                     {order.paymentMethod}
                                                 </p>
                                                 {order.isPaid
-                                                    ? <Message variant="success">Pago em {order.paidAt}</Message>
+                                                    ? <Message variant="success">Pago {order.paidAt}</Message>
                                                     : <Message variant="danger">Não Pago</Message>
                                                 }
                                             </ListGroup.Item>
@@ -157,24 +157,24 @@ const OrderScreen = ({ match }) => {
                                                 <ListGroup.Item>
                                                     <Row>
                                                         <Col>Preço Total</Col>
-                                                        <Col>{`RS ${(order.totalPrice - (order.taxPrice + order.shippingPrice).toFixed(2))}`}</Col>
+                                                        <Col>{`R$ ${(order.totalPrice - (order.taxPrice + order.shippingPrice)).toFixed(2)}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
-                                                        <Col>Envio</Col>
-                                                        <Col>{`RS ${order.shippingPrice}`}</Col>
+                                                        <Col>Frete</Col>
+                                                        <Col>{`R$ ${order.shippingPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item>
                                                     <Row>
                                                         <Col>Taxa</Col>
-                                                        <Col>{`RS ${order.taxPrice}`}</Col>
+                                                        <Col>{`R$ ${order.taxPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item><ListGroup.Item>
                                                     <Row>
                                                         <Col>Total</Col>
-                                                        <Col>{`RS ${order.totalPrice}`}</Col>
+                                                        <Col>{`R$ ${order.totalPrice}`}</Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 {

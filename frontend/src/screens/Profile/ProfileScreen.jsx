@@ -11,7 +11,8 @@ import { listMyProducts } from './../../actions/supplierProduct'
 import Meta from '../../components/Helmet/Meta';
 
 const ProfileScreen = ({ history }) => {
-
+    
+    /* const datePayment =  newDate(); */
     const [show, setShow] = useState(false);
     const [target, setTarget] = useState(null);
     const ref = useRef(null);
@@ -151,7 +152,7 @@ const ProfileScreen = ({ history }) => {
                                                         <tr key={order._id}>
                                                             <td>{order._id}</td>
                                                             <td>{order.createdAt.substring(0, 10)}</td>
-                                                            <td>{order.totalPrice}</td>
+                                                            <td>R${order.totalPrice}</td>
                                                             <td>{order.isPaid ? order.paidAt.substring(0, 10) :
                                                                 <i className="fas fa-times" styles={{ color: "red" }}></i>
                                                             }</td>

@@ -18,8 +18,8 @@ const PlaceOrder = ({ history }) => {
     }
 
     cart.itemsPrice = cart.cartItems.reduce((acc, item) => acc + item.qty * item.price, 0).toFixed(2)
-    cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 100
-    cart.taxPrice = addDecimals(Number(0.15 * cart.itemsPrice).toFixed(2))
+    cart.shippingPrice = cart.itemsPrice > 100 ? 0 : 12
+    cart.taxPrice = addDecimals(Number(0.25 * cart.itemsPrice).toFixed(2))
     cart.totalPrice = (Number(cart.itemsPrice) + Number(cart.shippingPrice) + Number(cart.taxPrice)).toFixed(2)
 
     const orderCreate = useSelector(state => state.orderCreate)
@@ -75,7 +75,7 @@ const PlaceOrder = ({ history }) => {
                                 </p>
                             </ListGroup.Item>
                             <ListGroup.Item>
-                                <h2>Pedidos</h2>
+                                <h2>Pedido</h2>
                                 {cart.cartItems.length === 0
                                     ? <Message>Seu carrinho esta vazio</Message>
                                     : (
@@ -91,7 +91,7 @@ const PlaceOrder = ({ history }) => {
                                                                 {item.name}
                                                             </Col>
                                                             <Col md={4}>
-                                                                {`${item.qty} x RS ${item.price} = RS ${item.qty * item.price}`}
+                                                                {`${item.qty} x R$ ${item.price} = R$ ${item.qty * item.price}`}
                                                             </Col>
                                                         </Row>
                                                     </ListGroup.Item>
@@ -112,24 +112,24 @@ const PlaceOrder = ({ history }) => {
                                 <ListGroup.Item>
                                     <Row>
                                         <Col>Itens</Col>
-                                        <Col>{`RS ${cart.itemsPrice}`}</Col>
+                                        <Col>{`R$ ${cart.itemsPrice}`}</Col>
                                     </Row>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
                                     <Row>
                                         <Col>Envio</Col>
-                                        <Col>{`RS ${cart.shippingPrice}`}</Col>
+                                        <Col>{`R$ ${cart.shippingPrice}`}</Col>
                                     </Row>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
                                     <Row>
                                         <Col>Taxa</Col>
-                                        <Col>{`RS ${cart.taxPrice}`}</Col>
+                                        <Col>{`R$ ${cart.taxPrice}`}</Col>
                                     </Row>
                                 </ListGroup.Item><ListGroup.Item>
                                     <Row>
                                         <Col>Total</Col>
-                                        <Col>{`RS ${cart.totalPrice}`}</Col>
+                                        <Col>{`R$ ${cart.totalPrice}`}</Col>
                                     </Row>
                                 </ListGroup.Item>
                                 <ListGroup.Item>
@@ -142,7 +142,7 @@ const PlaceOrder = ({ history }) => {
                                         className="btn-block"
                                         disabled={cart.cartItems === 0}
                                         onClick={placeOrder}
-                                    >Fazer encomenda</Button>
+                                    >Fazer pedido</Button>
                                 </ListGroup.Item>
                             </ListGroup>
                         </Card>
