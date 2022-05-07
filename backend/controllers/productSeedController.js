@@ -21,7 +21,7 @@ const getSeedProductById = asyncHandler(async (req, res) => {
         res.json(productSeed);
     } else {
         res.status(404)
-        throw new Error('Seed not Found')
+        throw new Error('Semente não encontrada')
     }
 })
 
@@ -33,10 +33,10 @@ const deleteSeedProduct = asyncHandler(async (req, res) => {
 
     if (productSeed) {
         productSeed.remove()
-        res.json({ message: "Product removed" });
+        res.json({ message: "Produto removido" });
     } else {
         res.status(404)
-        throw new Error('Seed not Found')
+        throw new Error('Semente não encontrada')
     }
 })
 
@@ -80,7 +80,7 @@ const updateSeedProduct = asyncHandler(async (req, res) => {
         res.status(201).json(updatedProduct)
     } else {
         res.status(401)
-        throw new Error('Product not found')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -114,11 +114,11 @@ const createSeedProductReview = asyncHandler(async (req, res) => {
 
         await productSeed.save()
         
-        res.status(201).json({ message: 'Review added' })
+        res.status(201).json({ message: 'Avaliação enviada' })
 
     } else {
         res.status(401)
-        throw new Error('Product not found')
+        throw new Error('Produto não encontrado')
     }
 })
 

@@ -22,7 +22,7 @@ const createSupplierProduct = asyncHandler(async (req, res) => {
 
     if (name & address === '') {
         res.status(400)
-        throw new Error('No Products Items')
+        throw new Error('Sem Itens')
     } else {
         let options = {
             provider: 'openstreetmap'
@@ -96,7 +96,7 @@ const getFarmerProductById = asyncHandler(async (req, res) => {
         res.json(product);
     } else {
         res.status(404)
-        throw new Error('Product not Found')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -130,11 +130,11 @@ const createFarmerProductReview = asyncHandler(async (req, res) => {
 
         await product.save()
 
-        res.status(201).json({ message: 'Review added' })
+        res.status(201).json({ message: 'Avaliação adicionada' })
 
     } else {
         res.status(401)
-        throw new Error('Product not found')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -155,7 +155,7 @@ const updateProductReviewed = asyncHandler(async (req, res) => {
         })
     } else {
         res.status(401)
-        throw new Error('Product not found!!')
+        throw new Error('Produto não encontrado')
     }
 })
 
@@ -217,7 +217,7 @@ const updateSupplierProductProfile = asyncHandler(async (req, res) => {
 
     } else {
         res.status(401)
-        throw new Error('User not found!!')
+        throw new Error('Usuario não encontrado')
     }
 })
 

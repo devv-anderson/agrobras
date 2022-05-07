@@ -21,7 +21,7 @@ const getLendMachnineById = asyncHandler(async(req, res) => {
         res.json(productLendMachine);
     } else {
         res.status(404)
-        throw new Error('Machine not Found')
+        throw new Error('Maquina não encontrada')
     }
 })
 
@@ -33,10 +33,10 @@ const deleteLendMachnine = asyncHandler(async(req, res) => {
 
     if(lendMachine) {
         lendMachine.remove()
-        res.json({ message: 'Machine Removed' });
+        res.json({ message: 'Maquina Removida' });
     } else {
         res.status(404)
-        throw new Error('Machine not Found')
+        throw new Error('Maquina não encontrada')
     }
 })
 
@@ -81,7 +81,7 @@ const updateLendMachine = asyncHandler(async (req, res) => {
         res.status(201).json(updatedMachine)
     } else {
         res.status(401)
-        throw new Error('Product not found')
+        throw new Error('Produto não encontrado')
     }
 })
 

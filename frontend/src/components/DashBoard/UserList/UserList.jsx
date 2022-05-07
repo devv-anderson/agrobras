@@ -50,11 +50,11 @@ const UserList = ({ history }) => {
                                 <thead>
                                     <tr>
                                         <td>ID</td>
-                                        <td>NAME</td>
-                                        <td>CROP SELECTION</td>
-                                        <td>EMAIL / NIC</td>
+                                        <td>NOME</td>
+                                       {/*  <td>CROP SELECTION</td> */}
+                                        <td>E-MAIL</td>
                                         <td>ADMIN</td>
-                                        <td>EDIT / DELETE</td>
+                                        <td>EDITAR / DELETAR</td>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -63,11 +63,11 @@ const UserList = ({ history }) => {
                                             <tr key={user._id}>
                                                 <td>{user._id}</td>
                                                 <td>{user.name}</td>
-                                                {
+                                               {/*  {
                                                     user.cropSelection
                                                         ? <td>{user.cropSelection}</td>
                                                         : <td style={{ color: 'red' }}>No Crop Selected</td>
-                                                }
+                                                } */}
                                                 <td><a href={`mailto:${user.email}`}>{user.email}</a></td>
                                                 <td>
                                                     {

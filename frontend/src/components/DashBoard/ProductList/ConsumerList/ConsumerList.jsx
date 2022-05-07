@@ -76,9 +76,8 @@ const ConsumerList = () => {
                             <thead>
                                 <tr>
                                     <td>ID</td>
-                                    <td>NOME DO VENDEDOR</td>
                                     <td>NOME DO PRODUTO</td>
-                                    <td>LOCALIZAÇÃO</td>
+                                    <td>PREÇO</td>
                                     <td>EDITAR / DELETAR</td>
                                 </tr>
                             </thead>
@@ -87,9 +86,8 @@ const ConsumerList = () => {
                                     consumerProducts.map(consumer => (
                                         <tr key={consumer._id}>
                                             <td>{consumer._id}</td>
-                                            <td>{consumer.seller_name}</td>
                                             <td>{consumer.prod_name}</td>
-                                            <td>{consumer.avalaible_location}</td>
+                                            <td>{consumer.price}</td>
                                             <td>
                                                 <LinkContainer to={`/admin/productlist/consumer/${consumer._id}/edit`}>
                                                     <Button variant="light" className="btn btn-sm">
